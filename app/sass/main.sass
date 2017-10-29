@@ -1,0 +1,2376 @@
+@import "fonts"
+
+@import "vars"
+
+
+
+ 
+@mixin big
+	@media (min-width: 1201px)
+		@content
+ 
+@mixin large
+    @media (min-width: 992px) and (max-width: 1200px)
+    	@content
+       
+@mixin medium
+	@media (min-width: 768px) and (max-width: 991px)
+	    @content
+           
+@mixin small
+    @media (min-width: 500px) and (max-width: 767px)
+    	@content
+
+@mixin micro
+    @media (min-width: 250px) and (max-width: 499px)
+        @content
+
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+	
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $gothamR
+	overflow-x: hidden
+	opacity: 1
+	color: #616161
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+.activated-top
+	left: 0!important
+.activated-bottom
+	right: 0!important
+	@include small
+		left: 0!important
+	@include micro
+		left: 0!important
+.activated-phones
+	top: 60px!important
+.activated-phones-bottom
+	right: 0px!important
+
+.wrapper
+	overflow: hidden
+
+
+.header
+	height: 720px
+	
+
+	@include medium
+		height: 760px
+	@include micro
+		height: 600px
+	.head-height
+		height: 60px
+	&-top
+		background: $accent
+		@include small
+			height: 60px
+		@include micro
+			height: 60px
+
+		.nav-mobile
+			position: relative
+			right: 15px
+			top: -7px
+			bottom: 0
+			height: 67px
+			background-color: transparent
+			width: 80px
+			cursor: pointer
+			transition: all linear .5s
+			margin-right: 0
+			display: inline-block
+			&.active			
+				.nav-mobile__line--top
+					top: 65%
+					transform: rotate(45deg)
+				.nav-mobile__line--middle
+					opacity: 0
+				.nav-mobile__line--bottom
+					top: 65%
+					transform: rotate(-45deg)
+
+			&__line	
+				position: absolute
+				right: 30%
+				display: block
+				width: 30px
+				height: 5px	
+				background-color: white
+				&--top
+					top: 25px
+					transition: all linear .5s
+				&--middle
+					top: 35px
+					opacity: 1
+					transition: all linear .5s
+				&--bottom
+					top: 45px
+					transition: all linear .5s
+
+
+
+
+
+		&__menu
+			list-style: none
+			padding: 0
+			margin: 0
+			height: 100%
+			transition: all .5s
+			@include medium
+				display: block
+				position: absolute
+				top: 60px
+				left: -500px
+				z-index: 100
+				height: 230px
+				width: 180px
+				background: #fff
+				padding-top: 10px
+				padding-left: 20px
+				box-shadow: 2px 2px 10px #616161
+
+			@include small
+				display: block
+				position: absolute
+				top: 60px
+				left: -500px
+				z-index: 100
+				height: 230px
+				width: 180px
+				background: #fff
+				padding-top: 10px
+				padding-left: 20px
+				box-shadow: 2px 2px 10px #616161
+			@include micro
+				display: block
+				position: absolute
+				top: 60px
+				left: -500px
+				z-index: 100
+				height: 230px
+				width: 180px
+				background: #fff
+				padding-top: 10px
+				padding-left: 20px
+				box-shadow: 2px 2px 10px #616161			
+			li
+				float: left
+				height: 60px
+				@include medium
+					float: none
+					height: 36px
+					display: block
+				@include small
+					float: none
+					height: 36px
+					display: block
+				@include micro
+					float: none
+					height: 36px
+					display: block
+
+				a
+					padding: 7px
+					font-size: 12px
+					font-family: $gothamR
+					line-height: 60px
+					color: #fff
+					@include large
+						font-size: 10px
+						padding: 5px
+					@include medium
+						color: #616161
+						line-height: 1
+						font-size: 14px
+					@include small
+						color: #616161
+						line-height: 1
+						font-size: 14px
+					@include micro
+						color: #616161
+						line-height: 1
+						font-size: 14px
+
+					&:hover
+						text-decoration: none
+						color: $acolor
+						@include medium
+							color: $accent
+						@include small
+							color: $accent
+
+		&__phones
+			height: 60px
+			display: inline-block
+			color: #fff
+			float: right
+			@include medium
+				display: block
+				margin: 0 auto
+				float: none
+				text-align: center
+				
+			@include small
+				display: none
+			@include micro
+				display: none
+
+			a
+				font-size: 14px
+				font-family: $gothamR
+				line-height: 60px
+				color: #fff
+				transition: all .5s
+				@include large
+					font-size: 11px
+				@include small
+					display: block
+					color: $accent
+					line-height: 30px
+				@include micro
+					display: block
+					color: $accent
+					line-height: 30px
+				
+				&:first-child:before
+					content: "\f095"
+					font-family: $awesome
+					margin-right: 5px
+					padding-top: 5px
+
+
+				&:hover
+					text-decoration: none
+					color: $acolor
+			span
+				@include small
+					display: none
+				@include micro
+					display: none
+
+		.phone-ico
+			font-size: 30px
+			height: 60px
+			line-height: 60px
+			color: #ffffff
+			cursor: pointer
+			display: inline-block
+			@include micro
+				float: right
+			&:hover
+				color: #333
+		&__phones-popup
+			height: 60px
+			display: inline-block
+			color: #fff
+			float: right
+			
+				
+			@include small
+				
+				margin: 0 auto
+				float: none
+				text-align: center
+				background: #ffffff
+				border: 1px solid rgba(#616161,0.4)
+				height: auto
+				position: absolute
+				width: 60%
+				top: -100px
+				z-index: 20
+				left: 50%
+				transform: translateX(-50%)
+				transition: all 0.5s
+
+			@include micro
+				
+				margin: 0 auto
+				float: none
+				text-align: center
+				background: #ffffff
+				border: 1px solid rgba(#616161,0.4)
+				height: auto
+				position: absolute
+				width: 60%
+				top: -180px
+				z-index: 20
+				left: 50%
+				transform: translateX(-50%)
+				transition: all 0.5s
+			a
+				font-size: 14px
+				font-family: $gothamR
+				line-height: 60px
+				color: #fff
+				transition: all .5s
+				font-weight: 600
+
+				@include small
+					display: block
+					color: $accent
+					line-height: 30px
+				@include micro
+					display: block
+					color: $accent
+					line-height: 30px
+		&__order
+			float: right
+			height: 60px
+			
+			display: inline-block
+			@include medium
+				float: none
+			@include small
+				float: none
+				display: block
+				height: 50px
+			@include micro
+				float: right
+			a
+				line-height: 60px
+				padding: 8px 12px
+				border: 1px solid #ffffff
+				border-radius: 40px
+				font-size: 15px
+				transition: all 0.5s
+				color: #ffffff
+				@include large
+					font-size: 12px
+					padding: 5px 8px
+				@include small
+					padding: 5px
+					display: block
+					width: 100%
+					margin: 8px auto
+					height: auto
+					text-align: center
+					line-height: 2
+				@include micro
+					padding: 5px
+					display: block
+					width: 100%
+					margin: 8px auto
+					height: auto
+					text-align: center
+					line-height: 2
+				&:hover
+					color: #eee
+					background: rgba($acolor,0.5)
+					text-decoration: none
+
+
+	&-main
+		position: relative
+		&__slider
+			width: 100%
+			height: 600px
+			max-height: 90vh
+			background: rgba(0,0,0,0.5)
+			z-index: 5
+			@include micro
+				height: 500px
+			.slider-top
+				z-index: 5
+				.slick-prev.slick-arrow
+					left: 30px!important
+					z-index: 20
+					height: 44px
+					width: 50px
+					@include large
+						left: 0px!important
+					@include medium
+						left: 0px!important
+					@include small
+						left: 0px!important
+					@include micro
+						left: 0px!important
+					&:before
+						font-size: 50px
+						color: #c9c2c3
+				.slick-next.slick-arrow
+					right: 30px!important
+					z-index: 20
+					height: 44px
+					width: 50px
+					@include large
+						right: 0px!important
+					@include medium
+						right: 0px!important
+					@include small
+						right: 0px!important
+					@include micro
+						right: 0px!important
+					&:before
+						font-size: 50px
+						color: #c9c2c3
+				.slick-dots
+					left: 10%
+					bottom: 10%
+					width: auto
+					@include micro
+						left: 50%
+						transform: translateX(-50%)
+					li.slick-active 
+						button
+							background-color: #d2377b
+						
+				.oneslide,
+				.twoslide,
+				.threeslide
+					@include large
+						padding-left: 40px
+					@include medium
+						padding-left: 40px
+						padding-right: 40px
+					@include small
+						padding-left: 40px
+						padding-right: 40px
+					@include micro
+						padding-left: 20px
+						padding-right: 20px
+
+					.content
+						margin-top: 25%
+						@include small
+							margin-top: 50%
+						@include micro
+							margin-top: 150px
+						.slide-title
+							font-size: 58px
+							color: #616161
+							line-height: 1
+							padding: 0
+							margin: 0
+							@include medium
+								font-size: 43px
+							@include small
+								font-size: 38px
+							@include micro
+								font-size: 26px
+								line-height: 1.3
+						.slide-title2
+							font-size: 50px
+							color: #616161
+							line-height: 1
+							padding: 0
+							margin: 0
+							@include medium
+								font-size: 43px
+							@include small
+								font-size: 38px
+							@include micro
+								font-size: 26px
+								line-height: 1.3
+						.slide-desc
+							font-size: 50px
+							color: #d2377b
+							line-height: 1
+							margin: 0
+							@include medium
+								font-size: 43px
+							@include small
+								font-size: 34px
+							@include micro
+								font-size: 20px
+								line-height: 1.5
+						.to-shop
+							color: #616161
+							font-size: 17px
+							padding: 10px 40px
+							border: 1px solid #616161
+							border-radius: 30px
+							margin-top: 40px
+							display: inline-block
+							@include micro
+								margin: 30px auto 0
+								text-align: center
+								display: block
+								width: 80%
+
+				.oneslide
+					background: url(../img/slide1.jpg)
+					height: 600px
+					background-size: cover
+					@include micro
+						height: 500px
+				.twoslide
+					background: url(../img/slide2.jpg)
+					height: 600px
+					background-size: cover
+					@include micro
+						height: 500px
+				.threeslide
+					background: url(../img/slide3.jpg)
+					height: 600px
+					background-size: cover
+					@include micro
+						height: 500px
+
+
+
+	&-mid
+		position: absolute
+		width: 100%
+		height: 60px
+		background: transparent
+		border-bottom: 1px solid rgba(0,0,0,0.1)
+		z-index: 10
+		@include medium
+			height: 120px
+			border-bottom: none
+		@include small
+			height: 120px
+			border-bottom: none
+		@include micro
+			height: 120px
+			border-bottom: none
+		.part
+			@include medium
+				height: 60px
+			@include small
+				height: 60px
+			@include micro
+				height: 60px
+		&__logo
+			height: 60px
+			@include medium
+				height: 60px
+			@include small
+				height: 60px
+				text-align: center
+				width: 200px
+				left: 50%
+				transform: translateX(-50%)
+			@include micro
+				height: 60px
+				text-align: center
+				width: 200px
+				left: 50%
+				transform: translateX(-50%)
+			.logotype-top
+				width: 150px
+				height: 50px
+				margin-top: 5px
+				transition: all .5s
+				@include small
+					width: 200px
+					height: 60px
+				@include micro
+					width: 200px
+					height: 60px
+					
+
+				&:hover
+					transform: translateY(-3px)
+					cursor: pointer
+			
+		&__menu
+			padding: 0
+			list-style: none
+			margin: 0
+			height: 60px
+			@include medium
+				width: 100%
+				margin: 0 auto
+				display: block
+				height: 60px
+			
+			
+			li
+				float: left
+				display: inline-block
+				font-family: $gothamR
+				padding: 0 10px
+				height: 60px
+				margin: 0
+				@include medium
+					padding: 0 9px
+				a
+					line-height: 60px
+					font-size: 16px
+					color: #616061
+					@include large
+						font-size: 12px
+					@include medium
+						font-size: 16px
+					&:hover
+						text-decoration: none
+						color: $accent
+						cursor: pointer
+		
+		&__actions
+			padding: 0
+			list-style: none
+			@include medium
+				height: 60px
+				float: right
+				right: -50%
+			@include small
+				height: 60px
+				float: none
+				text-align: center
+				display: block
+				margin: 0 auto
+				left: 50%
+				transform: translateX(-50%)
+				width: 200px
+			@include micro
+				height: 60px
+				float: none
+				text-align: center
+				display: block
+				margin: 0 auto
+				left: 50%
+				transform: translateX(-50%)
+				width: 200px
+
+				
+			li
+				float: left
+				height: 60px
+				margin: 0 8px
+				@include large
+					margin: 0 6px
+				@include small
+					margin: 0 10px
+				@include micro
+					margin: 0 10px
+
+				a
+					img
+						height: 26px
+						width: 26px
+						margin-top: 17px
+						@include large
+							height: 20px
+							width: 20px
+			.basket
+				position: relative		
+				.count
+					position: absolute
+					top: 14px
+					right: -10px
+					background: #616061
+					color: #fff
+					padding: 4px
+					font-size: 12px
+					height: 18px
+					width: 18px
+					line-height: 1
+					border-radius: 50%
+					text-align: center
+					
+						
+							
+						
+
+
+.main
+	
+
+	
+	&__title
+		text-align: center
+		margin-bottom: 60px
+		font-family: $gothamR
+		position: relative
+		margin: 0 auto 50px
+		text-align: center
+		left: 50%
+		transform: translateX(-50%)
+		line-height: 1
+		z-index: 55
+		font-size: 36px
+		color: #616061
+		@include large
+			font-size: 32px
+		@include medium
+			font-size: 32px
+		@include micro
+			font-size: 30px
+		
+		
+		&-cat
+			&:after
+				content: "КАТАЛОГ"
+				position: absolute
+				bottom: -3px
+				left: 50%
+				transform: translateX(-50%)
+				font-size: 60px
+				color: #f1f1f1
+				line-height: 1
+				margin: 0
+				padding: 0
+				font-family: $gothamBla
+				opacity: 0.4
+				z-index: -1
+				width: 100%
+				@include large
+					font-size: 40px
+				@include medium
+					font-size: 40px
+				@include small
+					display: none
+				@include micro
+					display: none
+		&-adv
+			
+			&:after
+				content: "НАШИ ПРЕИМУЩЕСТВА"
+				position: absolute
+				bottom: -3px
+				left: 50%
+				transform: translateX(-50%)
+				font-size: 60px
+				color: #f1f1f1
+				line-height: 1
+				margin: 0
+				padding: 0
+				font-family: $gothamBla
+				opacity: 0.4
+				z-index: -1
+				width: 100%
+				@include large
+					font-size: 40px
+				@include medium
+					font-size: 40px
+				@include small
+					display: none
+				@include micro
+					display: none
+		&-acts
+			&:after
+				content: "АКЦИИ"
+				position: absolute
+				bottom: -3px
+				left: 50%
+				transform: translateX(-50%)
+				font-size: 60px
+				color: #f1f1f1
+				line-height: 1
+				margin: 0
+				padding: 0
+				font-family: $gothamBla
+				opacity: 0.4
+				z-index: -1
+				width: 100%
+				@include large
+					font-size: 40px
+				@include medium
+					font-size: 40px
+				@include small
+					display: none
+				@include micro
+					display: none
+		&-dec
+			color: #fff
+			&:after
+				content: "SHOPPINGBABY В ЦИФРАХ"
+				position: absolute
+				bottom: -3px
+				left: 50%
+				transform: translateX(-50%)
+				font-size: 60px
+				color: #f1f1f1
+				line-height: 1
+				margin: 0
+				padding: 0
+				font-family: $gothamBla
+				opacity: 0.4
+				z-index: -1
+				width: 100%
+				@include large
+					font-size: 40px
+				@include medium
+					font-size: 40px
+				@include small
+					display: none
+				@include micro
+					display: none
+		&-our
+			
+			&:after
+				content: "НАШИ ТОВАРЫ"
+				position: absolute
+				bottom: -3px
+				left: 50%
+				transform: translateX(-50%)
+				font-size: 60px
+				color: #f1f1f1
+				line-height: 1
+				margin: 0
+				padding: 0
+				font-family: $gothamBla
+				opacity: 0.4
+				z-index: -1
+				width: 100%
+				@include large
+					font-size: 40px
+				@include medium
+					font-size: 40px
+				@include small
+					display: none
+				@include micro
+					display: none
+
+		&-news
+			
+			&:after
+				content: "НОВОСТИ"
+				position: absolute
+				bottom: -3px
+				left: 50%
+				transform: translateX(-50%)
+				font-size: 60px
+				color: #fff
+				line-height: 1
+				margin: 0
+				padding: 0
+				font-family: $gothamBla
+				opacity: 0.4
+				z-index: -1
+				width: 100%
+				@include large
+					font-size: 40px
+				@include medium
+					font-size: 40px
+				@include small
+					display: none
+				@include micro
+					display: none
+
+		&-brand
+			
+			&:after
+				content: "БРЕНДЫ"
+				position: absolute
+				bottom: -3px
+				left: 50%
+				transform: translateX(-50%)
+				font-size: 60px
+				color: #eee
+				line-height: 1
+				margin: 0
+				padding: 0
+				font-family: $gothamBla
+				opacity: 0.4
+				z-index: -1
+				width: 100%
+				@include large
+					font-size: 40px
+				@include medium
+					font-size: 40px
+				@include small
+					display: none
+				@include micro
+					display: none
+
+		&-rev
+			
+			&:after
+				content: "OТЗЫВЫ ПОКУПАТЕЛЕЙ"
+				position: absolute
+				bottom: -3px
+				left: 50%
+				transform: translateX(-50%)
+				font-size: 60px
+				color: #fff
+				line-height: 1
+				margin: 0
+				padding: 0
+				font-family: $gothamBla
+				opacity: 0.4
+				z-index: -1
+				width: 100%
+				@include large
+					font-size: 40px
+				@include medium
+					font-size: 40px
+				@include small
+					display: none
+				@include micro
+					display: none
+
+
+		&-about
+			
+			&:after
+				content: "ПОСМОТРИТЕ ЛУЧШЕ ВИДЕО О НАС"
+				position: absolute
+				bottom: -3px
+				left: 50%
+				transform: translateX(-50%)
+				font-size: 60px
+				color: #eee
+				line-height: 1
+				margin: 0
+				padding: 0
+				font-family: $gothamBla
+				opacity: 0.4
+				z-index: -1
+				width: 100%
+				@include large
+					font-size: 40px
+				@include medium
+					font-size: 40px
+					content: "ЛУЧШЕЕ ВИДЕО"
+				@include small
+					display: none
+				@include micro
+					display: none
+			
+
+	.catalog
+		margin-bottom: 60px
+		&__box
+			height: 230px
+			background: #f1f1f1
+			margin-bottom: 30px
+			padding-top: 20px
+			padding-right: 10px
+			border-radius: 4px
+			@include medium
+				height: 200px
+				padding-top: 10px
+				padding-right: 0
+			&:hover .catalog__title a
+				color: #d13a7a
+				cursor: pointer
+			&:hover .catalog__img img
+				transform: scale(1.1)
+
+		&__img
+			//width: 40%
+			display: inline-block
+			margin: 0
+			padding: 0
+			
+			img
+				width: 150px
+				transition: all 0.5s
+				@include large
+					width: 120px
+					margin-top: 20px
+				@include medium
+					width: 100px
+					margin-top: 30px
+				@include micro
+					width: 110px
+					margin-top: 30px
+			.bag-cust
+				margin-top: 50px
+				
+			.pamp-cust
+				width: 100px
+				margin-top: 40px
+				margin-left: 20px
+				@include large
+					width: 80px
+				@include medium
+					width: 75px
+					margin-left: 10px
+				@include micro
+					width: 75px
+			.thermo-cust
+				margin-top: 40px
+				@include large
+					margin-top: 30px
+		&__text
+			//width: 55%
+			display: inline-block
+			margin: 0
+			padding: 0
+		&__title
+			
+			
+			margin-top: 0
+			margin-bottom: 6px
+			height: 50px
+			@include medium
+				height: 40px
+				line-height: 15px
+			@include micro
+				height: 30px
+				line-height: 1
+				font-size: 15px
+			a
+				color: #616161
+				font-size: 20px
+				font-family: $gothamM
+				@include large
+					font-size: 18px
+				@include medium
+					font-size: 13px
+					line-height: 1
+				@include micro
+					font-size: 15px!important
+					line-height: 1.3
+
+				&:hover
+					text-decoration: none
+				
+		hr.hr	
+			width: 40px
+			border-top: 2px solid #616161!important
+			height: 4px
+			display: inline-block
+			margin-top: 10px
+			margin-bottom: 10px	
+			@include medium
+				margin-top: 0	
+		&__desc
+			color: #616161
+			font-size: 14px
+			font-family: $gothamL
+			line-height: 1.5
+			@include large
+				font-size: 13px
+				line-height: 1.4
+			@include medium
+				font-size: 11px
+				line-height: 1.3
+			@include micro
+				font-size: 12px
+				line-height: 1.5
+
+
+
+	.advantages
+		background: url(../img/advantages.png) no-repeat center
+		min-height: 540px
+		height: 100vh
+		background-size: 100% 100%
+		padding-top: 60px
+		margin-bottom: 60px
+		@include small
+			background-size: cover
+			height: 1250px
+			margin-bottom: 0
+		@include micro
+			background-size: cover
+			height: 1300px
+			margin-bottom: 0
+		&__item
+			height: 140px
+			padding: 0 10px
+			@include large
+				margin-bottom: 20px
+			@include medium
+				height: 160px
+			&-text
+				border-bottom: 1px solid #d13a7a
+				padding-bottom: 10px
+				margin-bottom: 20px
+			&-title
+				font-size: 20px
+				color: #d2377b
+				margin-left: 60px
+				@include medium
+					font-size: 15px
+					margin-left: 40px
+					
+				
+			.star
+				position: relative
+				&:before
+					position: absolute
+					content: ""
+					background: url(../img/star.png) no-repeat center
+					height: 42px
+					width: 42px
+					top: -10px
+					left: -60px
+					@include medium
+						left: -45px
+			.thumb
+				position: relative
+				&:before
+					position: absolute
+					content: ""
+					background: url(../img/thumb.png) no-repeat center
+					height: 42px
+					width: 42px
+					top: -10px
+					left: -60px
+					@include medium
+						left: -45px
+						top: -14px
+			.newest
+				position: relative
+				&:before
+					position: absolute
+					content: ""
+					background: url(../img/checked.png) no-repeat center
+					height: 42px
+					width: 42px
+					top: -10px
+					left: -60px
+					@include medium
+						left: -45px
+						top: -14px
+			.loyal
+				position: relative
+				&:before
+					position: absolute
+					content: ""
+					background: url(../img/loyal.png) no-repeat center
+					height: 42px
+					width: 42px
+					top: -10px
+					left: -60px
+					@include medium
+						left: -45px
+						top: -14px
+			.care
+				position: relative
+				&:before
+					position: absolute
+					content: ""
+					background: url(../img/care.png) no-repeat center
+					height: 42px
+					width: 42px
+					top: -10px
+					left: -60px
+					@include medium
+						left: -45px
+						top: -14px
+			.guarantee
+				position: relative
+				&:before
+					position: absolute
+					content: ""
+					background: url(../img/medal.png) no-repeat center
+					height: 42px
+					width: 42px
+					top: -10px
+					left: -60px
+					@include medium
+						left: -45px
+						top: -14px
+			&-desc
+				font-size: 12px
+				line-height: 1.5
+				color: #616061
+				@include medium
+					line-height: 1.2
+
+
+
+	.actions
+		margin-bottom: 60px
+
+		&__slider
+			padding: 0
+			.slick-prev.slick-arrow
+				left: -50px!important
+				z-index: 120
+				height: 44px
+				width: 50px
+				@include large
+					left: -20px!important
+				@include medium
+					left: -10px!important
+				@include small
+					left: -10px!important
+				@include micro
+					left: -10px!important
+				&:before
+					font-size: 50px
+					color: #c9c2c3
+			.slick-next.slick-arrow
+				right: -50px!important
+				z-index: 120
+				height: 44px
+				width: 50px
+				@include large
+					right: -20px!important
+				@include medium
+					right: -10px!important
+				@include small
+					right: -10px!important
+				@include micro
+					right: -10px!important
+				&:before
+					font-size: 50px
+					color: #c9c2c3
+			.slick-dots
+				li
+					border: 2px solid #c9c2c3
+				li.slick-active 
+					button
+						background-color: #d2377b
+		
+		&__items
+			margin: 0 auto
+			display: block
+			padding: 10px
+			outline: none
+
+			&-aitem
+				padding: 10px
+				margin: 10px 5px
+				border: 1px solid rgba(#616161,0.2)
+				height: 200px
+				border-radius: 4px
+				
+				.itm-img
+					width: 40%
+					margin: 0
+					padding: 0
+					float: left
+					img
+						width: 100%
+						@include small
+							width: auto
+						@include micro
+							width: 100%
+							margin-top: 40px
+				.itm-text
+					width: 60%
+					margin: 0
+					padding: 0
+					float: left
+					padding: 5px 5px
+					margin-top: 30px
+					@include large
+						margin-top: 20px
+					@include micro
+						margin-top: 10px
+					h5
+						font-size: 22px
+
+						
+						font-family: $gothamR
+						vertical-align: middle
+						@include large
+							font-size: 20px
+						@include micro
+							font-size: 15px
+							line-height: 1.4
+						.happy
+							font-family: $gothamM
+							font-weight: 600
+							color: $accent
+					p
+						color: $accent
+						@include large
+							font-size: 12px
+						@include medium
+							font-size: 14px
+						@include micro
+							font-size: 11px
+						.good
+							background: $accent
+							height: 40px
+							width: 40px
+							display: inline-block
+							border-radius: 50%
+							line-height: 40px
+							color: #fff	
+							margin: 0 auto
+							text-align: center
+							@include micro
+								height: 30px
+								width: 30px
+								line-height: 30px			
+
+
+					
+					
+	.decimals
+		background: url(../img/decimals.png)
+		height: 500px
+		padding-top: 60px
+		background-size: cover
+		margin-bottom: 60px
+		@include small
+			height: 550px
+		h2
+			margin-bottom: 80px		
+
+		.skill
+			margin-bottom: 40px
+			.skillbar
+				position: relative
+				display: block
+				margin-bottom: 30px
+				width: 80%
+				margin: 20px auto
+				background: #eee
+				height: 5px
+				border-radius: 3px
+				transition: 0.8s linear
+				transition-property: width, background-color
+				@include medium
+					width: 100%
+				@include micro
+					width: 100%
+			.skillbar-title
+				position: absolute
+				top: -35px
+				left: 0
+				
+				font-size: 20px
+				color: #fff
+				border-top-left-radius: 3px
+				border-bottom-left-radius: 3px
+				@include medium
+					font-size: 16px
+				@include micro
+					font-size: 14px
+					top: -27px
+
+			.skillbar-title span
+				display: block
+				font-size: 20px
+				font-family: $gothamM
+				padding: 0 20px
+				height: 35px
+				line-height: 1
+				border-top-left-radius: 3px
+				border-bottom-left-radius: 3px
+				position: absolute
+				top: 0px
+				width: 320px
+				@include medium
+					font-size: 16px
+					width: 300px
+				@include micro
+					font-size: 12px
+			.skillbar-bar
+				height: 5px
+				width: 0
+				background: #6adcfa
+				border-radius: 3px
+
+			.skillbar-bar-percent
+				position: absolute
+				right: 10px
+				top: -35px
+				font-size: 20px
+				line-height: 1
+				color: #fff
+				font-family: $gothamB
+
+		.add-img
+			margin-top: 20px
+			@include micro
+				margin-top: 0px
+			img
+				width: 150px
+				@include medium
+					float: right
+					width: 150px
+				@include small
+					width: 150px
+					float: none
+					text-align: center
+					display: block
+					margin: 0 auto
+				@include micro
+					width: 150px
+					float: none
+					text-align: center
+					display: block
+					margin: 0 auto
+
+	.ourgoods
+		margin-bottom: 60px
+		&__menubar
+			padding: 0
+			display: block
+			margin: 0 auto 70px
+			width: 40%
+			list-style: none
+			@include medium
+				width: 70%
+				height: 50px
+				margin-bottom: 30px
+			@include small
+				width: 100%
+				margin-bottom: 30px
+				height: 50px
+			@include micro
+				width: 100%
+				margin-bottom: 30px
+				height: 50px
+
+			li	
+				width: 50%
+				float: left
+				text-align: center
+				a
+					padding: 10px 20px
+					border: 1px solid #616161
+					color: #616161
+					border-radius: 40px
+					@include large
+						padding: 7px 10px
+					@include micro
+						font-size: 12px
+						padding: 5px
+
+					&:hover
+						color: #ffffff
+						background: $accent
+						text-decoration: none			
+		.goodsbox
+		
+			&__item
+				height: 440px
+				padding: 5px
+				@include large
+					height: 460px
+				@include medium
+					height: 440px
+			
+			&__card
+				border: 1px solid rgba($accent,.1)
+				border-radius: 20px	
+				height: 100%
+				padding: 10px 10px
+				overflow: hidden
+			.card
+				position: relative
+				&:hover .card-options
+					right: 10px
+				&:hover .card-title
+					color: $accent
+				&-options
+					padding: 0
+					list-style: none
+					position: absolute
+					right: -50px
+					top: 20px
+					transition: all 0.5s
+					li
+						margin-top: 10px
+					.tolike
+						background: url(../img/like11.png) no-repeat center
+						height: 18px
+						width: 18px
+						background-size: contain
+						&:hover
+							background: url(../img/like1.png) no-repeat center
+							background-size: contain
+					.tocompare
+						background: url(../img/graphic-comparison.png) no-repeat center
+						height: 18px
+						width: 18px
+						&:hover
+							background: url(../img/graphic-comparison2.png) no-repeat center
+					.tovisib
+						background: url(../img/visibility-button.png) no-repeat center
+						height: 18px
+						width: 18px
+						background-size: contain
+						&:hover
+							background: url(../img/visibility-button2.png) no-repeat center
+				&-sales
+					position: absolute
+					top: 20px
+					left: 10px
+					height: 50px
+					width: 50px
+					background: $accent
+					cursor: pointer
+					border-radius: 50%
+					@include small
+						height: 80px
+						width: 80px
+					@include micro
+						height: 80px
+						width: 80px
+					.percents
+						text-align: center
+						line-height: 50px
+						display: block
+						color: #fff
+						margin: 0 auto
+						@include small
+							line-height: 80px
+						@include micro
+							line-height: 80px
+
+				&-img
+					width: 100%
+					text-align: center
+					margin-top: 20px
+					margin-bottom: 20px
+				&-content
+					.card-title
+						line-height: 1.3
+						font-size: 14px
+						margin-bottom: 10px
+						padding: 0
+						display: block
+						@include large
+							font-size: 16px
+						@include small
+							font-size: 15px
+							height: 32px
+						@include micro
+							font-size: 15px
+							height: 32px
+					.rating
+						display: inline-block
+					.rating-hint
+						font-size: 14px
+						line-height: 14px
+					.card-price
+						
+						font-size: 20px		
+					
+					.card-buys
+						.buy
+							background: $accent
+							display: inline-block
+							padding: 2px 20px
+							border-radius: 20px
+							text-align: center
+							transition: all .5s
+							width: 25%
+							cursor: pointer
+							@include large
+								padding: 0px 15px
+							@include medium
+								padding: 0
+								width: 15%
+							@include small
+								padding: 5px 20px	
+							@include micro
+								padding: 5px 15px							
+								
+							&:hover
+								width: 35%
+								@include medium
+									width: 15%
+							.fa-shopping-basket
+								color: #fff
+								
+
+							span
+								display: none
+						.oneclick
+							font-size: 12px
+							padding: 5px 15px
+							border: 1px solid #616161
+							display: inline-block
+							border-radius: 20px
+							cursor: pointer
+							transition: all .5s
+							width: 60%
+							@include large
+								padding: 0 3px
+								font-size: 11px
+								line-height: 30px
+								height: 30px
+								width: 61%
+								text-align: center
+							@include medium
+								padding: 0 3px
+								font-size: 11px
+								line-height: 30px
+								height: 30px
+								width: 81%
+								text-align: center
+							@include small
+								text-align: center
+								font-size: 15px
+							@include micro
+								text-align: center
+								font-size: 14px
+								padding: 6px 15px
+							&:hover
+								color: #ffffff
+								background: $accent
+
+
+	.news
+		background: url(../img/bg-news.png) no-repeat center bottom
+		height: 740px
+		width: 100%
+		background-size: cover
+		padding-top: 60px
+		margin-bottom: 60px
+		@include large
+			height: 800px
+		@include medium
+			height: 800px
+		@include micro
+			height: 740px
+		&__slider
+			padding: 0
+			list-style: none
+
+			.slick-prev.slick-arrow
+				left: -50px!important
+				z-index: 120
+				height: 44px
+				width: 50px
+				@include large
+					left: -20px!important
+				@include medium
+					left: -10px!important
+				@include small
+					left: -10px!important
+				@include micro
+					left: -10px!important
+				&:before
+					font-size: 50px
+					color: #c9c2c3
+			.slick-next.slick-arrow
+				right: -50px!important
+				z-index: 120
+				height: 44px
+				width: 50px
+				@include large
+					right: -20px!important
+				@include medium
+					right: -10px!important
+				@include small
+					right: -10px!important
+				@include micro
+					right: -10px!important
+				&:before
+					font-size: 50px
+					color: #c9c2c3
+			.slick-dots
+				li
+					border: 2px solid #c9c2c3
+				li.slick-active 
+					button
+						background-color: #d2377b
+
+		&__item
+			padding: 10px
+			outline: none
+			@include medium
+				padding: 10px 35px
+			
+			.news-img
+				height: 200px
+				width: 100%
+				background-size: cover
+				border-radius: 5px
+			.new1
+				background: url(../img/new1.jpg) no-repeat center
+			.new2
+				background: url(../img/new2.jpg) no-repeat center
+			.new3
+				background: url(../img/new3.jpg) no-repeat center
+
+		&-content
+			margin-top: 30px
+			@include micro
+				margin-top: 20px
+			h4
+				font-size: 18px
+				font-family: $gothamM
+			.news-date
+				font-size: 18px
+				font-family: $gothamM
+				
+				&:before
+					content: "\f073"
+					font-family: $awesome
+					margin-right: 10px
+					color: $accent
+			p
+				line-height: 1.5
+				margin-top: 10px
+				font-size: 14px
+		.add-img
+			margin-top: 10px
+			@include medium
+				margin-top: 30px
+			@include micro
+				margin-top: 0px
+			img
+				width: 150px
+				@include medium
+					float: right
+					width: 150px
+				@include small
+					width: 150px
+					float: none
+					text-align: center
+					display: block
+					margin: 0 auto
+				@include micro
+					width: 150px
+					float: none
+					text-align: center
+					display: block
+					margin: 0 auto
+				
+
+	.brands
+		height: 280px
+		&__slider
+			list-style: none
+			padding: 0
+			.slick-prev.slick-arrow
+				left: -50px!important
+				z-index: 120
+				height: 44px
+				width: 50px
+				@include large
+					left: -20px!important
+				@include medium
+					left: -10px!important
+				@include small
+					left: -10px!important
+				@include micro
+					left: -10px!important
+				&:before
+					font-size: 50px
+					color: #c9c2c3
+			.slick-next.slick-arrow
+				right: -50px!important
+				z-index: 120
+				height: 44px
+				width: 50px
+				@include large
+					right: -20px!important
+				@include medium
+					right: -10px!important
+				@include small
+					right: -10px!important
+				@include micro
+					right: -10px!important
+				&:before
+					font-size: 50px
+					color: #c9c2c3
+			.slick-dots
+				li
+					border: 2px solid #c9c2c3
+				li.slick-active 
+					button
+						background-color: #d2377b
+		
+		&__item
+			outline: none
+			img
+				text-align: center
+				margin: 0 auto
+				@include medium
+					width: 75%
+
+
+
+	.review
+		background: url(../img/review-bg.png) no-repeat top
+		height: 550px
+		background-size: 100% 100%
+		width: 100%
+		padding-top: 60px
+		margin-bottom: 60px
+		@include large
+			height: 650px
+		@include medium
+			height: 550px
+			background-size: cover
+		@include small
+			height: 500px
+			background-size: cover
+		@include micro
+			height: 600px
+			background-size: cover	
+		&__slider
+			list-style: none
+			padding: 0
+			.slick-prev.slick-arrow
+				left: -50px!important
+				z-index: 120
+				height: 44px
+				width: 50px
+				@include large
+					left: 0px!important
+				@include medium
+					left: 0px!important
+				@include small
+					left: 0px!important
+				@include micro
+					left: 0px!important
+				&:before
+					font-size: 50px
+					color: #c9c2c3
+			.slick-next.slick-arrow
+				right: -50px!important
+				z-index: 120
+				height: 44px
+				width: 50px
+				@include large
+					right: 0px!important
+				@include medium
+					right: 0px!important
+				@include small
+					right: 0px!important
+				@include micro
+					right: 0px!important
+				&:before
+					font-size: 50px
+					color: #c9c2c3
+			.slick-dots
+				li
+					border: 2px solid #c9c2c3
+				li.slick-active 
+					button
+						background-color: #d2377b
+
+
+
+		&__item
+			padding: 10px
+			outline: none
+			@include medium
+				padding: 10px 25px
+			@include small
+				padding: 10px 25px	
+			@include micro
+				padding: 10px 25px		
+			.reviewer-person
+				
+				img
+					height: 40px
+					width: 40px
+					border-radius: 50%
+					float: left
+				h5
+					line-height: 40px
+					margin: 0 0 0 60px
+					font-size: 20px
+					color: $accent
+					@include micro
+						font-size: 16px
+			.reviewer-content
+				line-height: 1.5
+				font-size: 12px
+		.add-img
+			margin-top: 20px
+			@include micro
+				margin-top: 0px
+			img
+				width: 150px
+				@include medium
+					float: right
+					width: 150px
+				@include small
+					width: 150px
+					float: none
+					text-align: center
+					display: block
+					margin: 0 auto
+				@include micro
+					width: 150px
+					float: none
+					text-align: center
+					display: block
+					margin: 0 auto
+
+
+	.about
+		margin-bottom: 60px
+		.video
+			position: relative
+			margin-bottom: 140px
+			&:after
+				content: ""
+				position: absolute
+				background: url(../img/footmon.png) no-repeat center
+				height: 100px
+				width: 190px
+				bottom: -101px
+				left: 50%
+				transform: translateX(-50%)
+				z-index: 20000
+				@include small
+					height: 60px
+					width: 120px
+					background-size: 100%
+					bottom: -60px
+				@include micro
+					height: 60px
+					width: 120px
+					background-size: 100%
+					bottom: -60px
+			&__item
+				width: 700px
+				height: 400px
+				border: 20px solid black
+				background: black
+				margin: 0 auto
+				border-radius: 30px
+				overflow: hidden
+				position: relative
+
+				@include small
+					width: 460px
+					height: 260px
+				@include micro
+					width: 100%
+					height: 200px
+					border: 8px solid black
+					border-radius: 15px
+
+
+				iframe
+					max-width: 100%
+					display: block
+					margin: 0 auto
+					max-height: 100%
+
+
+		.manual
+			
+			height: 160px
+			@include small
+				height: 100%
+			@include micro
+				height: 100%
+			&__img
+				height: 160px
+				@include small
+					height: 260px
+				@include micro
+					height: 200px
+				img
+					width: 100%
+					@include small
+						width: 260px
+						text-align: center
+						display: block
+						margin: 0 auto
+					@include micro
+						width: 200px
+						text-align: center
+						display: block
+						margin: 0 auto
+			&__content
+				padding: 5px 20px
+				height: 160px
+				vertical-align: middle
+				display: flex
+				align-items: center
+				@include medium
+					height: 70px
+				h3
+					font-size: 36px
+					padding: 0
+					margin: 0
+					line-height: 1
+					@include medium
+						font-size: 31px
+					@include micro
+						font-size: 30px
+					span
+						color: $accent
+			&__btn
+				display: flex
+				align-items: center
+				height: 160px
+				@include medium
+					height: 60px
+					justify-content: flex-end
+				a
+					padding: 6px 10px
+					text-align: center
+					border: 1px solid #616161
+					border-radius: 20px
+					background-color: $accent
+					color: #fff
+					font-size: 15px
+					transition: all 0.5s
+					width: 100%
+					float: right
+					@include medium
+						width: 240px
+					@include small
+						width: 80%
+						text-align: center
+						margin: 0 auto
+					@include micro
+						width: 80%
+						text-align: center
+						margin: 0 auto
+					&:hover
+						text-decoration: none
+						color: $accent
+						background: transparent
+
+
+.footer
+	background: url(../img/bg-footer.jpg)
+	height: 100%
+	color: #fff
+	padding-top: 50px
+	z-index: 10
+	@include small
+		padding-top: 20px
+		background-size: cover
+	@include micro
+		padding-top: 20px
+		background-size: cover
+	&__logo
+		height: 120px
+		a
+			@include small
+				text-align: center
+				display: block
+				margin: 0 auto
+			@include micro
+				text-align: center
+				display: block
+				margin: 0 auto
+			img
+
+				margin-bottom: 30px
+				@include small
+					height: 80px
+				@include micro
+					height: 80px
+			
+	&__contacts
+
+		h4
+			font-size: 16px
+		p
+			font-size: 13px
+			line-height: 1.5
+	&__list
+		padding: 0
+		margin: 0
+		list-style: none
+		margin-top: 40px
+		li
+			width: 50%
+			float: left
+			a
+				color: #fff
+				font-size: 13px
+				line-height: 2
+				&:hover
+					color: $accent
+					text-decoration: none
+	&__social
+		margin-top: 50px
+		text-align: right
+		@include small
+			text-align: center
+			display: flex
+			flex-direction: column-reverse
+			margin-top: 0px
+		@include micro
+			text-align: center
+			display: flex
+			flex-direction: column-reverse
+			margin-top: 0px
+
+	&__subscribe
+		margin-top: 20px
+		float: right
+		@include medium
+			margin-top: 0
+		@include small
+			float: none
+		@include micro
+			float: none
+		input
+			
+			border-bottom-left-radius: 20px
+			border-top-left-radius: 20px
+			border: none
+			line-height: 40px
+			padding: 0
+			padding-left: 10px
+			outline: none
+			color: #616161
+			width: 230px
+			position: relative
+			left: 10px
+			height: 40px
+			@include medium
+				width: 200px
+				
+		button
+			
+			
+			border: none
+			border-bottom-right-radius: 20px
+			border-top-right-radius: 20px
+			background-color: $accent
+			height: 40px
+			width: 40px
+
+	.soc-btns
+		padding: 0
+		list-style: none
+		display: block
+		width: 100%
+		float: right
+		margin-top: 20px
+		@include medium
+			width: auto
+			float: left
+			margin-top: 10px
+		li
+			display: inline-block
+			margin-left: 10px
+			width: 30px
+			a
+				width: 30px
+				.fa
+					color: #fff
+					background: rgba(0,0,0,0.4)
+					padding: 4px
+					border-radius: 3px
+					transition: all 0.5s
+					&:hover
+						background: $accent
+				.fa-facebook
+					padding: 4px 8px
+				.fa-instagram
+					padding: 4px 6px
+				.fa-twitter
+					padding: 4px 6px
+	.bottom-menu
+		position: relative
+		height: 1px
+		@include small
+			height: 60px
+			margin-bottom: 20px
+		@include micro
+			height: 60px
+			margin-bottom: 20px
+		.footnav-mobile
+			position: relative
+			right: -90%
+			top: -30px
+			bottom: 0
+			height: 58px
+			background-color: transparent
+			width: 60px
+			cursor: pointer
+			transition: all linear .5s
+			margin-right: 0
+			display: inline-block
+			border-radius: 5px
+			border: 2px solid #fff
+			z-index: 5
+			
+			@include small
+				left: 2%
+				top: 0
+			@include micro
+				left: 2%
+				top: 0
+
+			
+			&.active			
+				.footnav-mobile__line--top
+					top: 50%
+					transform: rotate(45deg)
+				.footnav-mobile__line--middle
+					opacity: 0
+				.footnav-mobile__line--bottom
+					top: 50%
+					transform: rotate(-45deg)
+
+			&__line	
+				position: absolute
+				right: 23%
+				display: block
+				width: 30px
+				height: 5px	
+				background-color: white
+				border-radius: 5px
+				&--top
+					top: 15px
+					transition: all linear .5s
+				&--middle
+					top: 25px
+					opacity: 1
+					transition: all linear .5s
+				&--bottom
+					top: 35px
+					transition: all linear .5s
+		.footer__menu
+			position: absolute
+			right: -500px
+			top: -280px
+			padding: 0
+			margin: 0
+			list-style: none
+			background: #ffffff
+			padding-left: 20px
+			box-shadow: 2px 2px 10px #616161
+			z-index: 1
+			height: 230px
+			width: 180px	
+			padding-top: 10px
+			transition: all 0.5s
+			@include small
+				left: -500px
+				top: -250px
+			@include micro
+				left: -500px
+				top: -250px
+				
+				
+			li
+				height: 36px
+				display: block
+				a
+					font-size: 14px
+					color: #616161
+					line-height: 1
+					&:hover
+						text-decoration: none
+						color: $accent
+		
+		.footer__phones-ico
+			position: absolute
+			top: 0
+			right: 2%
+			cursor: pointer
+			.fa
+				font-size: 50px
+		.footer__phones-popup
+			background: #ffffff
+			box-shadow: 2px 2px 10px #616161
+			top: -92px
+			right: -300px
+			display: inline-block
+			position: absolute
+			transition: all 0.5s
+			a
+				display: block
+				margin: 5px 15px
+				color: $accent
+				font-weight: 700
+
+
+					
+
+
+	.fbottom
+		border-top: 2px solid #616161
+		height: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@include small
+			flex-direction: column
+		@include micro
+			flex-direction: column
+		&__left
+			height: 50px
+			@include small
+				height: 50px
+				text-align: center
+				margin-top: 10px
+			@include micro
+				height: 70px
+				text-align: center
+				margin-top: 10px
+	
+			p
+				margin: 0
+				padding: 0
+				line-height: 50px
+				@include small
+					line-height: 1.5
+				@include micro
+					line-height: 1.5
+				
+							
+			
+			
+		&__right
+			height: 50px
+			display: flex
+			align-items: center
+			img
+				margin-left: 10px
+				@include small
+					margin: 0 5px
+				@include micro
+					margin: 0 5px
+			
+			
+
+
+#up
+	width: 50px
+	height: 50px
+	background: rgba(0,0,0,0.5)
+	position: fixed
+	right: 20px
+	bottom: 20px
+	border-radius: 50%
+	cursor: pointer
+	transition: all 0.5s
+	&:hover
+		background: $accent
+	.fa-angle-up
+		font-size: 40px
+		color: #fff
+		text-align: center
+		margin: 0 auto
+		display: block
+		line-height: 45px
+		position: relative
+		animation: totop 1s 1s infinite
+		
+
+@-keyframes totop
+	0%
+		font-size: 20px
+	50%
+		font-size: 10px
