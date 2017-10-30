@@ -9,10 +9,8 @@ $(document).ready(function() {
   });
   
 	$(".phone-ico").on("click", function(){
-   
     $(".header-top__phones-popup").toggleClass("activated-phones");
     $(".header-top.header-top__menu").removeClass("activated-top");
-
 	});
 
 	$(".footnav-mobile").on("click", function(){
@@ -35,8 +33,9 @@ $(document).ready(function() {
      */
 
       $('.slider-top').slick({
-            infinite:true,
-            
+        infinite:true,
+        autoplay: true,
+        autoplaySpeed: 10000,    
         slidesToShow:1,
         slidesToScroll:1,
         arrows: true,
@@ -86,7 +85,8 @@ $(document).ready(function() {
 //slider3
             $('.news__slider').slick({
                 infinite:true,
-                
+                autoplay: true,
+                autoplaySpeed: 10000, 
                 slidesToShow:3,
                 slidesToScroll:3,
                 arrows: true,
@@ -128,7 +128,8 @@ $(document).ready(function() {
 //slider4
         $('.brands__slider').slick({
             infinite:true,
-            
+            autoplay: true,
+            autoplaySpeed: 5000, 
             slidesToShow:4,
             slidesToScroll:2,
             arrows: true,
@@ -169,7 +170,8 @@ $(document).ready(function() {
 //slider5
           $('.review__slider').slick({
               infinite:true,
-              
+              autoplay: true,
+              autoplaySpeed: 5000, 
               slidesToShow:4,
               slidesToScroll:2,
               arrows: true,
@@ -212,14 +214,14 @@ $(document).ready(function() {
             $(".skillbar").each(function(){
                 $(this).find(".skillbar-bar").animate({
                   width:$(this).attr("data-percent")
-                }, 8000);
+                }, 10000);
               });
               
               $(".skillbar-bar-percent").each(function(){
                 $(this).prop("Counter", 0). animate({
                   Counter:$(this).text()
                 },{
-                  duration: 8000,
+                  duration: 10000,
                   easing:"swing",
                   step: function(now){
                   $(this).text(Math.ceil(now) +"%");
@@ -237,9 +239,33 @@ $(document).ready(function() {
               });
 
 
+	/**
+     * scrollto smooth
+     */
+		jQuery("a.scrollTo").click(function () {
+			var elementClick = jQuery(this).attr("href")
+			var destination = jQuery(elementClick).offset().top +10;
+			jQuery("html:not(:animated),body:not(:animated)").animate({
+				scrollTop: destination
+			}, 800);
+			$('.collapse').collapse('hide');
+			return false;
+		});
+		jQuery('#up').click(function () {
+			$('html, body').animate({scrollTop: 0}, 500);
+			return false;
+		});
 
+		   jQuery(window).scroll(function () {
+			if (jQuery(document).scrollTop() > 300) {
+				jQuery('#up').fadeIn('fast');
+			} else {
+				jQuery('#up').fadeOut('fast');
+        }
+    });
 
-
+   //filtering
+   var mixer = mixitup(".goodsbox");
 
 
 
@@ -264,30 +290,7 @@ $(document).ready(function() {
 			});
 		});
 
-  	/**
-     * scrollto smooth
-     */
-		jQuery("a.scrollTo").click(function () {
-			var elementClick = jQuery(this).attr("href")
-			var destination = jQuery(elementClick).offset().top +10;
-			jQuery("html:not(:animated),body:not(:animated)").animate({
-				scrollTop: destination
-			}, 800);
-			$('.collapse').collapse('hide');
-			return false;
-		});
-		jQuery('#up').click(function () {
-			$('html, body').animate({scrollTop: 0}, 500);
-			return false;
-		});
-
-		   jQuery(window).scroll(function () {
-			if (jQuery(document).scrollTop() > 300) {
-				jQuery('#up').fadeIn('fast');
-			} else {
-				jQuery('#up').fadeOut('fast');
-        }
-    });
+  
 	 /**
      * fancybox
      */

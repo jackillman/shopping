@@ -145,7 +145,7 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-md-8">
-										<div class="content">
+										<div class="content wow bounceInLeft">
 											<h1 class="slide-title">С нашими товарами</h1>
 											<h2 class="slide-title2">не выпадет ни один ребенок</h2> 
 											<h2 class="slide-desc">Родителям дает крылья</h2>
@@ -518,8 +518,8 @@
 					<div class="row">
 						<div class="col-md-12">	
 								<ul class="ourgoods__menubar">
-									<li><a href="#">Лучшие товары</a></li>
-									<li><a href="#">Уникальные товары</a></li>
+									<li data-filter=".bests"> <span>Лучшие товары</span> </li>
+									<li data-filter=".unique"> <span> Уникальные товары</span> </li>
 								</ul>
 						</div>
 					</div>
@@ -528,7 +528,7 @@
 				<div class="container">
 					<div class="row goodsbox">
 						
-							<div class="col-sm-4 col-md-3 mix goodsbox__item">
+							<div class="col-sm-4 col-md-3 mix goodsbox__item bests">
 								<div class="goodsbox__card card">
 									<ul class="card-options">
 										<li class="tolike"><a href="#" ></a></li>
@@ -541,7 +541,7 @@
 									</div>
 
 									<div class="card-img">
-										<img src="img/ourgood.png" alt="good">
+										<img src="img/sock.png" alt="good">
 									</div>
 									<div class="card-content">
 										<a href="#" class="card-title">Пустышка для кормления, жевания</a>
@@ -559,7 +559,7 @@
 								</div>
 							</div>
 
-							<div class="col-sm-4 col-md-3 mix goodsbox__item">
+							<div class="col-sm-4 col-md-3 mix goodsbox__item unique">
 									<div class="goodsbox__card card">
 										<ul class="card-options">
 												<li class="tolike"><a href="#" ></a></li>
@@ -591,7 +591,70 @@
 							</div>						
 
 
-							<div class="col-sm-4 col-md-3 mix goodsbox__item">
+							<div class="col-sm-4 col-md-3 mix goodsbox__item bests">
+									<div class="goodsbox__card card">
+										<ul class="card-options">
+												<li class="tolike"><a href="#" ></a></li>
+												<li class="tocompare"><a href=""></a></li>
+												<li class="tovisib"><a href=""></a></li>
+										</ul>
+	
+										<div class="card-sales">
+												<span class="percents">-15%</span>
+										</div>
+	
+										<div class="card-img">
+											<img src="img/sock.png" alt="good">
+										</div>
+										<div class="card-content">
+											<a href="#" class="card-title">Пустышка для кормления, жевания</a>
+											<div class="rating" data-score="1"></div>
+											<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+											<div class="card-price">
+												
+												<p class="cash">120 <span class="currency">грн.</span> </p>
+											</div>
+											<div class="card-buys">
+												<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+												<div class="oneclick">Купить в один клик</div>
+											</div>
+										</div>
+									</div>
+							</div>
+
+
+							<div class="col-sm-4 col-md-3 mix goodsbox__item bests">
+									<div class="goodsbox__card card">
+										<ul class="card-options">
+												<li class="tolike"><a href="#" ></a></li>
+												<li class="tocompare"><a href=""></a></li>
+												<li class="tovisib"><a href=""></a></li>
+										</ul>
+	
+										<div class="card-sales">
+												<span class="percents">-15%</span>
+										</div>
+	
+										<div class="card-img">
+											<img src="img/sock.png" alt="good">
+										</div>
+										<div class="card-content">
+											<a href="#" class="card-title">Пустышка для кормления, жевания</a>
+											<div class="rating" data-score="1"></div>
+											<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+											<div class="card-price">
+												
+												<p class="cash">120 <span class="currency">грн.</span> </p>
+											</div>
+											<div class="card-buys">
+												<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+												<div class="oneclick">Купить в один клик</div>
+											</div>
+										</div>
+									</div>
+							</div>
+
+							<div class="col-sm-4 col-md-3 mix goodsbox__item unique">
 									<div class="goodsbox__card card">
 										<ul class="card-options">
 												<li class="tolike"><a href="#" ></a></li>
@@ -623,70 +686,7 @@
 							</div>
 
 
-							<div class="col-sm-4 col-md-3 mix goodsbox__item">
-									<div class="goodsbox__card card">
-										<ul class="card-options">
-												<li class="tolike"><a href="#" ></a></li>
-												<li class="tocompare"><a href=""></a></li>
-												<li class="tovisib"><a href=""></a></li>
-										</ul>
-	
-										<div class="card-sales">
-												<span class="percents">-15%</span>
-										</div>
-	
-										<div class="card-img">
-											<img src="img/ourgood.png" alt="good">
-										</div>
-										<div class="card-content">
-											<a href="#" class="card-title">Пустышка для кормления, жевания</a>
-											<div class="rating" data-score="1"></div>
-											<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
-											<div class="card-price">
-												
-												<p class="cash">120 <span class="currency">грн.</span> </p>
-											</div>
-											<div class="card-buys">
-												<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
-												<div class="oneclick">Купить в один клик</div>
-											</div>
-										</div>
-									</div>
-							</div>
-
-							<div class="col-sm-4 col-md-3 mix goodsbox__item">
-									<div class="goodsbox__card card">
-										<ul class="card-options">
-												<li class="tolike"><a href="#" ></a></li>
-												<li class="tocompare"><a href=""></a></li>
-												<li class="tovisib"><a href=""></a></li>
-										</ul>
-	
-										<div class="card-sales">
-												<span class="percents">-15%</span>
-										</div>
-	
-										<div class="card-img">
-											<img src="img/ourgood.png" alt="good">
-										</div>
-										<div class="card-content">
-											<a href="#" class="card-title">Пустышка для кормления, жевания</a>
-											<div class="rating" data-score="1"></div>
-											<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
-											<div class="card-price">
-												
-												<p class="cash">120 <span class="currency">грн.</span> </p>
-											</div>
-											<div class="card-buys">
-												<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
-												<div class="oneclick">Купить в один клик</div>
-											</div>
-										</div>
-									</div>
-							</div>
-
-
-							<div class="col-sm-4 col-md-3 mix goodsbox__item">
+							<div class="col-sm-4 col-md-3 mix goodsbox__item unique">
 										<div class="goodsbox__card card">
 											<ul class="card-options">
 													<li class="tolike"><a href="#" ></a></li>
@@ -717,7 +717,7 @@
 										</div>
 								</div>
 
-								<div class="hidden-sm hidden-xs col-md-3 mix goodsbox__item">
+								<div class="col-md-3 mix goodsbox__item bests">
 											<div class="goodsbox__card card">
 												<ul class="card-options">
 														<li class="tolike"><a href="#" ></a></li>
@@ -730,7 +730,7 @@
 												</div>
 			
 												<div class="card-img">
-													<img src="img/ourgood.png" alt="good">
+													<img src="img/sock.png" alt="good">
 												</div>
 												<div class="card-content">
 													<a href="#" class="card-title">Пустышка для кормления, жевания</a>
@@ -748,7 +748,7 @@
 											</div>
 								</div>
 
-								<div class="hidden-sm hidden-xs col-md-3 mix goodsbox__item">
+								<div class="col-md-3 mix goodsbox__item unique">
 												<div class="goodsbox__card card">
 													<ul class="card-options">
 															<li class="tolike"><a href="#" ></a></li>
@@ -1136,6 +1136,7 @@
 	<script src="libs/wow.min.js"></script>
 	<script src="libs/bootstrap/bootstrap.min.js"></script>
 	<script src="libs/raty/jquery.raty.js"></script>
+	<script src="libs/mixitup.min.js"></script>
     <script>
         new WOW().init();
     </script>
