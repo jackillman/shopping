@@ -1,16 +1,38 @@
 
 $(document).ready(function() {
 
+//параллакс топслайдера
+ $(window).scroll(function(){
+  var scr = $(this).scrollTop();
+  $(".content").css({
+    "transform": "translate(0%,"+ scr/18 +"%)"
+    });
+    $(".catalog").css({
+      "transform": "translate(0%,"+ -scr/100 +"%)"
+      });
+
+ });
+
+
+
 	$(".nav-mobile").on("click", function(){
 		$(this).toggleClass("active");
     $("ul.menu").toggleClass("showed");
     $(".header-top.header-top__menu").toggleClass("activated-top");
     $(".header-top__phones-popup").removeClass("activated-phones");
+    $(".searching").removeClass("activated-search-panel");
   });
   
 	$(".phone-ico").on("click", function(){
     $(".header-top__phones-popup").toggleClass("activated-phones");
     $(".header-top.header-top__menu").removeClass("activated-top");
+    $(".nav-mobile").removeClass("active");
+  });
+  
+  $(".search").on("click", function(){
+    $(".searching").toggleClass("activated-search-panel");
+    $(".header-top.header-top__menu").removeClass("activated-top");
+    $(".header-top__phones-popup").removeClass("activated-phones");
 	});
 
 	$(".footnav-mobile").on("click", function(){
@@ -211,6 +233,7 @@ $(document).ready(function() {
           });
 
 //skillbar
+
             $(".skillbar").each(function(){
                 $(this).find(".skillbar-bar").animate({
                   width:$(this).attr("data-percent")

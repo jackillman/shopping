@@ -78,6 +78,17 @@ body
 	height: auto
 .activated-top
 	left: 0!important
+.activated-search-panel
+	right: 0!important
+	@include medium
+		right: 200px!important
+		top: 11px!important
+	@include small
+		right: 50%!important
+		transform: translateX(50%)!important
+	@include micro
+		right: 50%!important
+		transform: translateX(50%)!important
 .activated-bottom
 	right: 0!important
 	@include small
@@ -124,12 +135,12 @@ body
 			display: inline-block
 			&.active			
 				.nav-mobile__line--top
-					top: 65%
+					top: 50%
 					transform: rotate(45deg)
 				.nav-mobile__line--middle
 					opacity: 0
 				.nav-mobile__line--bottom
-					top: 65%
+					top: 50%
 					transform: rotate(-45deg)
 
 			&__line	
@@ -449,7 +460,7 @@ body
 						color: #c9c2c3
 				.slick-dots
 					left: 10%
-					bottom: 10%
+					bottom: 7%
 					width: auto
 					@include micro
 						left: 50%
@@ -461,12 +472,14 @@ body
 				.oneslide,
 				.twoslide,
 				.threeslide
+					position: relative
 					@include large
 						padding-left: 40px
 					@include medium
 						padding-left: 40px
 						padding-right: 40px
 					@include small
+
 						padding-left: 40px
 						padding-right: 40px
 					@include micro
@@ -474,17 +487,18 @@ body
 						padding-right: 20px
 
 					.content
-						margin-top: 25%
-						@include small
-							margin-top: 50%
+						position: absolute
+						top: 200px
 						@include micro
-							margin-top: 150px
+							top: 170px
 						.slide-title
 							font-size: 58px
 							color: #616161
 							line-height: 1
 							padding: 0
 							margin: 0
+							@include large
+								font-size: 45px
 							@include medium
 								font-size: 43px
 							@include small
@@ -498,6 +512,8 @@ body
 							line-height: 1
 							padding: 0
 							margin: 0
+							@include large
+								font-size: 45px
 							@include medium
 								font-size: 43px
 							@include small
@@ -510,6 +526,8 @@ body
 							color: #d2377b
 							line-height: 1
 							margin: 0
+							@include large
+								font-size: 45px
 							@include medium
 								font-size: 43px
 							@include small
@@ -703,6 +721,19 @@ body
 					line-height: 1
 					border-radius: 50%
 					text-align: center
+		.searching
+			padding: 2px
+			background: $accent
+			width: 200px
+			position: absolute
+			top: 60px
+			right: -500px
+			transition: all 0.5s
+			@include medium
+				top: 11px
+			input
+				width: 100%
+				outline: none
 					
 						
 .main
@@ -959,7 +990,16 @@ body
 			
 
 	.catalog
-		margin-bottom: 60px
+		margin-bottom: 0px
+		margin-top: 40px
+		@include medium
+			margin-top: 0px
+		@include small
+			margin-top: 50px
+			height: 1450px
+		@include micro
+			margin-top: 50px
+			height: 1450px
 		&__box
 			height: 230px
 			background: #f1f1f1
