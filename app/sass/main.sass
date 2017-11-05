@@ -1,3 +1,4 @@
+
 @import "fonts"
 
 @import "vars"
@@ -76,6 +77,8 @@ body
 	display: block
 	max-width: 100%
 	height: auto
+
+										//классы для анимаций
 .activated-top
 	left: 0!important
 .activated-search-panel
@@ -100,14 +103,24 @@ body
 .activated-phones-bottom
 	right: 0px!important
 
+.add-action-icons
+	transform: scale(1.3,1.3)
+	animation: rotate-search 1s infinite alternate
+
+@keyframes rotate-search
+	0%
+		transform: rotate(10deg)
+	50%
+		transform: rotate(-10deg)
+
+
+		
 .wrapper
 	overflow: hidden
 
-
+													//хедер
 .header
 	height: 720px
-	
-
 	@include medium
 		height: 760px
 	@include micro
@@ -120,7 +133,6 @@ body
 			height: 60px
 		@include micro
 			height: 60px
-
 		.nav-mobile
 			position: relative
 			right: 15px
@@ -142,7 +154,6 @@ body
 				.nav-mobile__line--bottom
 					top: 50%
 					transform: rotate(-45deg)
-
 			&__line	
 				position: absolute
 				right: 30%
@@ -160,10 +171,6 @@ body
 				&--bottom
 					top: 45px
 					transition: all linear .5s
-
-
-
-
 
 		&__menu
 			list-style: none
@@ -269,7 +276,6 @@ body
 				display: none
 			@include micro
 				display: none
-
 			a
 				font-size: 14px
 				font-family: $gothamR
@@ -292,8 +298,6 @@ body
 					font-family: $awesome
 					margin-right: 5px
 					padding-top: 5px
-
-
 				&:hover
 					text-decoration: none
 					color: $acolor
@@ -302,7 +306,6 @@ body
 					display: none
 				@include micro
 					display: none
-
 		.phone-ico
 			font-size: 30px
 			height: 60px
@@ -312,17 +315,15 @@ body
 			display: inline-block
 			@include micro
 				float: right
+				padding-top: 3px
 			&:hover
-				color: #333
+				color: #eee
 		&__phones-popup
 			height: 60px
 			display: inline-block
 			color: #fff
 			float: right
-			
-				
 			@include small
-				
 				margin: 0 auto
 				float: none
 				text-align: center
@@ -336,9 +337,7 @@ body
 				left: 50%
 				transform: translateX(-50%)
 				transition: all 0.5s
-
 			@include micro
-				
 				margin: 0 auto
 				float: none
 				text-align: center
@@ -412,8 +411,7 @@ body
 					color: #eee
 					background: rgba($acolor,0.5)
 					text-decoration: none
-
-
+													//слайдер в хедере
 	&-main
 		position: relative
 		&__slider
@@ -468,7 +466,6 @@ body
 					li.slick-active 
 						button
 							background-color: #d2377b
-						
 				.oneslide,
 				.twoslide,
 				.threeslide
@@ -485,7 +482,6 @@ body
 					@include micro
 						padding-left: 20px
 						padding-right: 20px
-
 					.content
 						position: absolute
 						top: 200px
@@ -550,9 +546,20 @@ body
 								width: 80%
 
 				.oneslide
-					background: url(../img/slide1.jpg)
+					background: url(../img/imgw.jpg) no-repeat center center
 					height: 600px
 					background-size: cover
+					img
+						height: 500px
+						position: absolute
+						top: 100px
+						right: 30px
+						@include medium
+							display: none
+						@include small
+							display: none
+						@include micro
+							display: none
 					@include micro
 						height: 500px
 				.twoslide
@@ -567,9 +574,7 @@ body
 					background-size: cover
 					@include micro
 						height: 500px
-
-
-
+															//хедер мидл
 	&-mid
 		position: absolute
 		width: 100%
@@ -620,8 +625,6 @@ body
 				@include micro
 					width: 200px
 					height: 60px
-					
-
 				&:hover
 					transform: translateY(-3px)
 					cursor: pointer
@@ -636,8 +639,6 @@ body
 				margin: 0 auto
 				display: block
 				height: 60px
-			
-			
 			li
 				float: left
 				display: inline-block
@@ -685,8 +686,6 @@ body
 				left: 50%
 				transform: translateX(-50%)
 				width: 200px
-
-				
 			li
 				float: left
 				height: 60px
@@ -697,12 +696,12 @@ body
 					margin: 0 10px
 				@include micro
 					margin: 0 10px
-
 				a
 					img
 						height: 26px
 						width: 26px
 						margin-top: 17px
+						
 						@include large
 							height: 20px
 							width: 20px
@@ -735,8 +734,227 @@ body
 				width: 100%
 				outline: none
 					
-						
+						//заголовки блоков
 .main
+	.catalog-block
+		margin-bottom: 20px
+		height: 100%
+		&__filtering
+			background: #f5f5f5
+			padding: 5px
+
+			.pricingpicker
+				height: 100%
+				padding: 10px 5px 10px
+				border-bottom: 1px solid #dbdbdb
+				label
+					margin-bottom: 20px
+					font-size: 18px
+				#slider-range
+					height: 5px
+					margin-bottom: 16px
+					.ui-slider-handle.ui-corner-all.ui-state-default
+						border-radius: 50%
+						top: -6px
+						border: none
+						background-color: $accent
+						outline: none
+						font-size: 12px
+					.ui-slider-range.ui-corner-all.ui-widget-header
+						background: $accent
+				&__tofilter
+					border-radius: 30px
+					outline: none
+					font-size: 15px
+					background: $accent
+					color: #fff
+					border: none
+					&:hover
+						background: rgba($accent,0.5)
+						color: #616161
+				&__price-desc
+					font-size: 12px
+					margin-left: 10px
+				#pricingpicker__slide
+					border: 0 
+					color: #616161
+					float: right
+					text-align: center
+					display: inline-block
+					width: 80px
+					background: #f5f5f5
+					font-size: 12px
+					height: 30px
+					
+			.categoriespicker
+				height: 100%
+				padding: 10px 5px 5px
+				border-bottom: 1px solid #dbdbdb
+				.title-cats
+					font-size: 18px
+					margin: 20px 5px 0px
+					font-weight: bold
+					
+				#accordion
+					font-family: "goth-reg", sans-serif
+					height: 100%
+					padding: 10px 0px 5px
+					
+					.ui-accordion-header
+						border: none
+						.ui-icon
+							float: right
+							z-index: 1000
+						.ui-icon-circle-arrow-e
+							background-position: -34px -12px
+						.count
+							color: black
+							&:before
+								content: "("
+								color: #616161
+							&:after
+								content: ")"
+								color: #616161
+					.ui-state-active
+						background: transparent
+						color: $accent
+						outline: none
+						border: none
+						.ui-icon
+							float: right
+						.ui-icon-circle-arrow-s
+							background-position: -65px -12px
+						.count
+							color: black
+							&:before
+								content: "("
+								color: #616161
+							&:after
+								content: ")"
+								color: #616161
+					.ui-accordion-content
+						padding: 0px 15px
+						background: #f5f5f5
+						border: none
+						a
+							text-decoration: none
+							font-size: 14px
+							&:hover
+								color: $accent				
+
+			.agepicker
+				height: 100%
+				padding: 10px 5px 5px
+				border-bottom: 1px solid #dbdbdb
+				.title-age
+					font-size: 18px
+					margin: 20px 5px 10px
+					font-weight: bold
+				ul
+					padding: 0 10px
+					list-style-type: none
+					li
+						label
+							font-size: 14px
+							font-weight: normal
+							margin: 0
+						input
+							outline: none
+						.count-age
+							float: right
+							font-size: 14px
+							&:before
+								content: "("
+								color: #616161
+							&:after
+								content: ")"
+								color: #616161
+			
+			.sexpicker
+				height: 100%
+				padding: 10px 5px 5px
+				border-bottom: 1px solid #dbdbdb
+				.title-sex
+					font-size: 18px
+					margin: 20px 5px 10px
+					font-weight: bold
+				ul
+					padding: 0 10px
+					list-style-type: none
+					li
+						label
+							font-size: 14px
+							font-weight: normal
+							margin: 0
+						input
+							outline: none
+						.count-sex
+							float: right
+							font-size: 14px
+							&:before
+								content: "("
+								color: #616161
+							&:after
+								content: ")"
+								color: #616161
+
+			.brandpicker
+				height: 100%
+				padding: 10px 5px 5px
+				border-bottom: 1px solid #dbdbdb
+				.title-brand
+					font-size: 18px
+					margin: 20px 5px 10px
+					font-weight: bold
+				ul
+					padding: 0 10px
+					list-style-type: none
+					li
+						label
+							font-size: 14px
+							font-weight: normal
+							margin: 0
+						input
+							outline: none
+						.count-brand
+							float: right
+							font-size: 14px
+							&:before
+								content: "("
+								color: #616161
+							&:after
+								content: ")"
+								color: #616161
+
+			.formatpicker
+				height: 100%
+				padding: 10px 5px 5px
+				
+				.title-format
+					font-size: 18px
+					margin: 20px 5px 10px
+					font-weight: bold
+				ul
+					padding: 0 10px
+					list-style-type: none
+					li
+						label
+							font-size: 14px
+							font-weight: normal
+							margin: 0
+						input
+							outline: none
+						.count-format
+							float: right
+							font-size: 14px
+							&:before
+								content: "("
+								color: #616161
+							&:after
+								content: ")"
+								color: #616161
+
+
 	&__title
 		text-align: center
 		margin-bottom: 60px
@@ -987,8 +1205,9 @@ body
 					display: none
 				@include micro
 					display: none
-			
 
+
+									//Каталог
 	.catalog
 		margin-bottom: 0px
 		margin-top: 40px
@@ -999,7 +1218,7 @@ body
 			height: 1450px
 		@include micro
 			margin-top: 50px
-			height: 1450px
+			height: 1420px
 		&__box
 			height: 230px
 			background: #f1f1f1
@@ -1007,6 +1226,7 @@ body
 			padding-top: 20px
 			padding-right: 10px
 			border-radius: 4px
+			transition: all 0.5s
 			@include medium
 				height: 200px
 				padding-top: 10px
@@ -1014,15 +1234,20 @@ body
 			&:hover .catalog__title a
 				color: #d13a7a
 				cursor: pointer
+				font-size: 20.5px
+				@include medium
+					font-size: 17px
+				@include micro
+					font-size: 17px
 			&:hover .catalog__img img
-				transform: rotate3d(0,1,0,180deg)
-
+				transform: scale(1.1)
+			&:hover
+				transform: scale(0.95)
 		&__img
 			//width: 40%
 			display: inline-block
 			margin: 0
 			padding: 0
-			
 			img
 				width: 150px
 				transition: all 0.5s
@@ -1037,7 +1262,6 @@ body
 					margin-top: 30px
 			.bag-cust
 				margin-top: 50px
-				
 			.pamp-cust
 				width: 100px
 				margin-top: 40px
@@ -1059,8 +1283,6 @@ body
 			margin: 0
 			padding: 0
 		&__title
-			
-			
 			margin-top: 0
 			margin-bottom: 6px
 			height: 50px
@@ -1075,6 +1297,7 @@ body
 				color: #616161
 				font-size: 20px
 				font-family: $gothamM
+				transition: all 0.5s
 				@include large
 					font-size: 18px
 				@include medium
@@ -1083,7 +1306,6 @@ body
 				@include micro
 					font-size: 15px!important
 					line-height: 1.3
-
 				&:hover
 					text-decoration: none
 				
@@ -1110,9 +1332,7 @@ body
 			@include micro
 				font-size: 12px
 				line-height: 1.5
-
-
-
+															//Преимущества
 	.advantages
 		background: url(../img/advantages.png) no-repeat center
 		min-height: 540px
@@ -1120,6 +1340,10 @@ body
 		background-size: 100% 100%
 		padding-top: 60px
 		margin-bottom: 60px
+		@include large
+			height: 650px
+		@include medium
+			height: 650px
 		@include small
 			background-size: cover
 			height: 1250px
@@ -1147,7 +1371,6 @@ body
 					font-size: 15px
 					margin-left: 40px
 					
-				
 			.star
 				position: relative
 				&:before
@@ -1231,12 +1454,9 @@ body
 				color: #616061
 				@include medium
 					line-height: 1.2
-
-
-
+														//Акции
 	.actions
 		margin-bottom: 60px
-
 		&__slider
 			padding: 0
 			.slick-prev.slick-arrow
@@ -1277,26 +1497,22 @@ body
 				li.slick-active 
 					button
 						background-color: #d2377b
-		
 		&__items
 			margin: 0 auto
 			display: block
 			padding: 10px
 			outline: none
-
 			&-aitem
 				padding: 10px
 				margin: 10px 5px
 				border: 1px solid rgba(#616161,0.2)
 				height: 200px
 				border-radius: 4px
-				
 				.itm-img
 					width: 40%
 					margin: 0
 					padding: 0
 					float: left
-					
 					img
 						width: 100%
 						@include small
@@ -1317,8 +1533,6 @@ body
 						margin-top: 10px
 					h5
 						font-size: 22px
-
-						
 						font-family: $gothamR
 						vertical-align: middle
 						@include large
@@ -1352,10 +1566,7 @@ body
 								height: 30px
 								width: 30px
 								line-height: 30px			
-
-
-					
-					
+														//магазин в цифрах
 	.decimals
 		background: url(../img/decimals.png)
 		height: 500px
@@ -1366,7 +1577,6 @@ body
 			height: 550px
 		h2
 			margin-bottom: 80px		
-
 		.skill
 			margin-bottom: 40px
 			.skillbar
@@ -1388,7 +1598,6 @@ body
 				position: absolute
 				top: -35px
 				left: 0
-				
 				font-size: 20px
 				color: #fff
 				border-top-left-radius: 3px
@@ -1398,7 +1607,6 @@ body
 				@include micro
 					font-size: 14px
 					top: -27px
-
 			.skillbar-title span
 				display: block
 				font-size: 20px
@@ -1421,7 +1629,6 @@ body
 				width: 0
 				background: #6adcfa
 				border-radius: 3px
-
 			.skillbar-bar-percent
 				position: absolute
 				right: 10px
@@ -1430,7 +1637,6 @@ body
 				line-height: 1
 				color: #fff
 				font-family: $gothamB
-
 		.add-img
 			margin-top: 20px
 			@include micro
@@ -1452,7 +1658,7 @@ body
 					text-align: center
 					display: block
 					margin: 0 auto
-
+												//Наши товары
 	.ourgoods
 		margin-bottom: 60px
 		&__menubar
@@ -1473,7 +1679,6 @@ body
 				width: 100%
 				margin-bottom: 30px
 				height: 50px
-
 			li	
 				width: 50%
 				float: left
@@ -1489,13 +1694,13 @@ body
 					@include micro
 						font-size: 12px
 						padding: 7px
-
 					&:hover
 						color: #ffffff
 						background: $accent
-						text-decoration: none			
+						text-decoration: none		
+
+													//Единица ТОВАРА	
 		.goodsbox
-		
 			&__item
 				height: 440px
 				padding: 5px
@@ -1503,7 +1708,6 @@ body
 					height: 460px
 				@include medium
 					height: 440px
-			
 			&__card
 				border: 1px solid rgba($accent,.1)
 				border-radius: 20px	
@@ -1589,6 +1793,7 @@ body
 						margin-bottom: 10px
 						padding: 0
 						display: block
+						height: 30px
 						@include large
 							font-size: 16px
 						@include small
@@ -1603,9 +1808,7 @@ body
 						font-size: 14px
 						line-height: 14px
 					.card-price
-						
 						font-size: 20px		
-					
 					.card-buys
 						.buy
 							background: $accent
@@ -1616,6 +1819,7 @@ body
 							transition: all .5s
 							width: 25%
 							cursor: pointer
+							position: relative
 							@include large
 								padding: 0px 15px
 							@include medium
@@ -1625,15 +1829,19 @@ body
 								padding: 5px 20px	
 							@include micro
 								padding: 5px 15px							
-								
 							&:hover
 								width: 35%
 								@include medium
 									width: 15%
+							&:hover:after
+								content: "Добавить в корзину"
+								position: absolute
+								top: -20px
+								left: -10px
+								font-size: 12px
+								width: 150px
 							.fa-shopping-basket
 								color: #fff
-								
-
 							span
 								display: none
 						.oneclick
@@ -1669,8 +1877,7 @@ body
 							&:hover
 								color: #ffffff
 								background: $accent
-
-
+																	//Новости магазина
 	.news
 		background: url(../img/bg-news.png) no-repeat center bottom
 		height: 740px
@@ -1687,7 +1894,6 @@ body
 		&__slider
 			padding: 0
 			list-style: none
-
 			.slick-prev.slick-arrow
 				left: -50px!important
 				z-index: 120
@@ -1726,13 +1932,11 @@ body
 				li.slick-active 
 					button
 						background-color: #d2377b
-
 		&__item
 			padding: 10px
 			outline: none
 			@include medium
 				padding: 10px 35px
-			
 			.news-img
 				height: 200px
 				width: 100%
@@ -1744,7 +1948,6 @@ body
 				background: url(../img/new2.jpg) no-repeat center
 			.new3
 				background: url(../img/new3.jpg) no-repeat center
-
 		&-content
 			margin-top: 30px
 			@include micro
@@ -1755,7 +1958,6 @@ body
 			.news-date
 				font-size: 18px
 				font-family: $gothamM
-				
 				&:before
 					content: "\f073"
 					font-family: $awesome
@@ -1788,8 +1990,7 @@ body
 					text-align: center
 					display: block
 					margin: 0 auto
-				
-
+															//Бренды
 	.brands
 		height: 280px
 		&__slider
@@ -1843,7 +2044,7 @@ body
 					width: 75%
 
 
-
+																	//Отзывы
 	.review
 		background: url(../img/review-bg.png) no-repeat top
 		height: 550px
@@ -1903,9 +2104,6 @@ body
 				li.slick-active 
 					button
 						background-color: #d2377b
-
-
-
 		&__item
 			padding: 10px
 			outline: none
@@ -1953,7 +2151,7 @@ body
 					text-align: center
 					display: block
 					margin: 0 auto
-
+																			//О магазине
 
 	.about
 		margin-bottom: 60px
@@ -2084,7 +2282,7 @@ body
 						color: $accent
 						background: transparent
 
-
+														//Футер
 .footer
 	background: url(../img/bg-footer.jpg)
 	height: 100%
@@ -2396,8 +2594,11 @@ body
 	border-radius: 50%
 	cursor: pointer
 	transition: all 0.5s
+	z-index: 100
+	border: 1px solid rgba(33,33,33,0)
 	&:hover
 		background: $accent
+		border: 1px solid rgba(33,33,33,0.3)
 	.fa-angle-up
 		font-size: 40px
 		color: #fff
@@ -2409,8 +2610,27 @@ body
 		animation: totop 1s 1s infinite
 		
 
-@-keyframes totop
-	0%
-		font-size: 20px
-	50%
-		font-size: 10px
+
+
+// .KW_progressContainer
+// 	left: 0
+// 	width: 100%
+// 	height: 0.4em
+// 	margin-bottom: 0px
+// 	position: fixed
+// 	top: 0px
+// 	overflow: hidden
+// 	background-color: white
+// 	content: ""
+// 	display: table
+// 	table-layout: fixed
+
+
+// 	.KW_progressBar
+// 		width: 0%
+// 		float: left
+// 		height: 100%
+// 		z-index: 99
+// 		max-width: 100%
+// 		background-color: orange
+// 		transition: width .6s ease

@@ -5,7 +5,7 @@ $(document).ready(function() {
  $(window).scroll(function(){
   var scr = $(this).scrollTop();
   $(".content").css({
-    "transform": "translate(0%,"+ scr/18 +"%)"
+    "transform": "translate(0%,"+ -scr/18 +"%)"
     });
     $(".catalog").css({
       "transform": "translate(0%,"+ -scr/100 +"%)"
@@ -15,28 +15,41 @@ $(document).ready(function() {
 
 
 
+
+
+
+
 	$(".nav-mobile").on("click", function(){
 		$(this).toggleClass("active");
     $("ul.menu").toggleClass("showed");
     $(".header-top.header-top__menu").toggleClass("activated-top");
     $(".header-top__phones-popup").removeClass("activated-phones");
     $(".searching").removeClass("activated-search-panel");
+    $(".search img").removeClass("add-action-icons");
+    $(".phone-ico").removeClass("add-action-icons");
   });
   
 	$(".phone-ico").on("click", function(){
+    $(".searching").removeClass("activated-search-panel");
     $(".header-top__phones-popup").toggleClass("activated-phones");
     $(".header-top.header-top__menu").removeClass("activated-top");
     $(".nav-mobile").removeClass("active");
+    $(this).toggleClass("add-action-icons");
+    $(".search img").removeClass("add-action-icons");
   });
   
   $(".search").on("click", function(){
+    
     $(".searching").toggleClass("activated-search-panel");
     $(".header-top.header-top__menu").removeClass("activated-top");
     $(".header-top__phones-popup").removeClass("activated-phones");
+    $(".search img").toggleClass("add-action-icons");
+    $(".phone-ico").removeClass("add-action-icons");
 	});
 
 	$(".footnav-mobile").on("click", function(){
-		$(this).toggleClass("active");
+    $(this).toggleClass("active");
+    $(".footer__phones-ico").removeClass("add-action-icons");
     $("ul.menu").toggleClass("showed");
     $(".footer__menu").toggleClass("activated-bottom");
     $(".footer__phones-popup").removeClass("activated-phones-bottom");
@@ -45,9 +58,9 @@ $(document).ready(function() {
   $(".footer__phones-ico").on("click", function(){
     $(".footer__phones-popup").toggleClass("activated-phones-bottom");
     $(".footer__menu").removeClass("activated-bottom");
+    $(".footer__phones-ico").toggleClass("add-action-icons");
   });
   
-
 
 
   	/**
@@ -234,23 +247,45 @@ $(document).ready(function() {
 
 //skillbar
 
-            $(".skillbar").each(function(){
-                $(this).find(".skillbar-bar").animate({
-                  width:$(this).attr("data-percent")
-                }, 10000);
-              });
-              
-              $(".skillbar-bar-percent").each(function(){
-                $(this).prop("Counter", 0). animate({
-                  Counter:$(this).text()
-                },{
-                  duration: 10000,
-                  easing:"swing",
-                  step: function(now){
-                  $(this).text(Math.ceil(now) +"%");
-                }
+            // $(".skillbar").each(function(){
+            //     $(this).find(".skillbar-bar").animate({
+            //       width:$(this).attr("data-percent")
+            //     }, 10000);
+            //   });
+              // function addProcents(){
+              //   $(".skillbar-bar-percent").each(function(){
+              //     $(this).prop("Counter", 0). animate({
+              //       Counter:$(this).text()
+              //     },{
+              //       duration: 4000,
+              //       easing:"swing",
+              //       step: function(now){
+              //       $(this).text(Math.ceil(now) +"%");
+              //     }
+              //     });
+              //   });
+                
+              // }
+ 
+
+
+            var skillsDiv = $('.skill');
+            
+            $(window).on('scroll', function(){
+              var winT = $(window).scrollTop(),
+                winH = $(window).height(),
+                skillsT = skillsDiv.offset().top;
+              if(winT + winH  > skillsT){
+                $('.skillbar').each(function(){
+                  $(this).find('.skillbar-bar').animate({
+                    width:$(this).attr('data-percent')
+                  },4000);
                 });
-              });
+                // addProcents();
+
+              }
+            });
+
               
 //рейтинг
               $.fn.raty.defaults.path = '../libs/raty/images';
@@ -291,87 +326,96 @@ $(document).ready(function() {
    var mixer = mixitup(".goodsbox");
 
 
-
+  });
   	/**
      * accordion
      */
 
-		$(function () {
-			var icons = {
-				header: "plus",
-				activeHeader: "minus"
-			};
-			$("#accordion").accordion({
-				icons: icons
-			});
-			$("#toggle").button().on("click", function () {
-				if ($("#accordion").accordion("option", "icons")) {
-					$("#accordion").accordion("option", "icons", null);
-				} else {
-					$("#accordion").accordion("option", "icons", icons);
-				}
-			});
-		});
+		// $(function () {
+		// 	var icons = {
+		// 		header: "plus",
+		// 		activeHeader: "minus"
+		// 	};
+		// 	$("#accordion").accordion({
+		// 		icons: icons
+		// 	});
+		// 	$("#toggle").button().on("click", function () {
+		// 		if ($("#accordion").accordion("option", "icons")) {
+		// 			$("#accordion").accordion("option", "icons", null);
+		// 		} else {
+		// 			$("#accordion").accordion("option", "icons", icons);
+		// 		}
+		// 	});
+		// });
 
   
 	 /**
      * fancybox
      */
-    $('.fancy').fancybox({'padding':0,'closeBtn': true});
+    // $('.fancy').fancybox({'padding':0,'closeBtn': true});
 
   	/**
      * Send email with AJAX
      */
 
-    $('#ajax-form').submit(function () {
-        var email = $(this).find("input[name='email']").val(),
-            message = $(this).find("textarea.message").val();
+    // $('#ajax-form').submit(function () {
+    //     var email = $(this).find("input[name='email']").val(),
+    //         message = $(this).find("textarea.message").val();
 
-        $.ajax({
-            type: "POST",
-            url: "email.php",
-            data: {
-                email: email,
-                message: message
-            },
-            success: function (response) {
-                // hide form's header and fields before message show
-                $(".ajax-form-container .modal-header").addClass('invisible');
-                $(".ajax-form-container .modal-body").addClass('invisible');
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "email.php",
+    //         data: {
+    //             email: email,
+    //             message: message
+    //         },
+    //         success: function (response) {
+    //             // hide form's header and fields before message show
+    //             $(".ajax-form-container .modal-header").addClass('invisible');
+    //             $(".ajax-form-container .modal-body").addClass('invisible');
 
-                if (response == 'OK') {
-                    $('.email-container-success').removeClass('display-none');
-                }
-                else {
-                    $('.email-container-error').removeClass('display-none');
-                }
+    //             if (response == 'OK') {
+    //                 $('.email-container-success').removeClass('display-none');
+    //             }
+    //             else {
+    //                 $('.email-container-error').removeClass('display-none');
+    //             }
 
-                // generate window close event
-                setTimeout(function(){
-                    // hide messages
-                    $('.email-container-success').addClass('display-none');
-                    $('.email-container-error').addClass('display-none');
+    //             // generate window close event
+    //             setTimeout(function(){
+    //                 // hide messages
+    //                 $('.email-container-success').addClass('display-none');
+    //                 $('.email-container-error').addClass('display-none');
 
-                    // показываем скрытые заголовок и поля формы перед закрытием popup окна
-                    $(".ajax-form-container .modal-header").removeClass('invisible');
-                    $(".ajax-form-container .modal-body").removeClass('invisible');
+    //                 // показываем скрытые заголовок и поля формы перед закрытием popup окна
+    //                 $(".ajax-form-container .modal-header").removeClass('invisible');
+    //                 $(".ajax-form-container .modal-body").removeClass('invisible');
 
-                    // очистка полей формы
-                    $('#modalConsultation.modal').find('form')[0].reset();
+    //                 // очистка полей формы
+    //                 $('#modalConsultation.modal').find('form')[0].reset();
 
-                    // закрываем окно модальное окно
-                    $('#modalConsultation.modal').modal('hide');
-                }, 4000);
-            }
-        });
-        return false;
-    });
-
-
-});
+    //                 // закрываем окно модальное окно
+    //                 $('#modalConsultation.modal').modal('hide');
+    //             }, 4000);
+    //         }
+    //     });
+    //     return false;
+    // });
 
 
 
+
+
+// $(window).load(function(){
+//   $(window).scroll(function() {
+//     var wintop = $(window).scrollTop(), docheight = $('body').height(), winheight = $(window).height();
+//     console.log(wintop);
+//     var totalScroll = (wintop/(docheight-winheight))*100;
+//     console.log("total scroll" + totalScroll);
+//     $(".KW_progressBar").css("width",totalScroll+"%");
+//   });
+
+// });
 
 
 
