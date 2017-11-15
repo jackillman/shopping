@@ -19,6 +19,7 @@ var gulp           = require('gulp'),
 gulp.task('common-js', function() {
 	return gulp.src([
 		'app/js/common.js',
+		'app/js/common-catalog.js',
 		])
 	// .pipe(concat('common.min.js'))
 	// .pipe(uglify())
@@ -28,6 +29,7 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		// 'app/libs/jquery/dist/jquery.min.js',
+		'app/js/common-catalog.js',
 		'app/js/common.js', // Всегда в конце
 		])
 	// .pipe(concat('scripts.min.js'))
@@ -83,7 +85,8 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 
 
 	var buildCss = gulp.src([
-		'app/css/main.min.css',
+		
+		'app/css/*.css',
 		]).pipe(gulp.dest('dist/css'));
 
 	var buildJs = gulp.src([

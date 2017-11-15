@@ -33,7 +33,7 @@ $(document).ready(function() {
     $(".searching").removeClass("activated-search-panel");
     $(".header-top__phones-popup").toggleClass("activated-phones");
     $(".header-top.header-top__menu").removeClass("activated-top");
-    $(".nav-mobile").removeClass("active");
+  
     $(this).toggleClass("add-action-icons");
     $(".search img").removeClass("add-action-icons");
   });
@@ -43,6 +43,7 @@ $(document).ready(function() {
     $(".searching").toggleClass("activated-search-panel");
     $(".header-top.header-top__menu").removeClass("activated-top");
     $(".header-top__phones-popup").removeClass("activated-phones");
+    $(".nav-mobile").removeClass("active");
     $(".search img").toggleClass("add-action-icons");
     $(".phone-ico").removeClass("add-action-icons");
 	});
@@ -58,10 +59,32 @@ $(document).ready(function() {
   $(".footer__phones-ico").on("click", function(){
     $(".footer__phones-popup").toggleClass("activated-phones-bottom");
     $(".footer__menu").removeClass("activated-bottom");
+    $(".footnav-mobile").removeClass("active");
     $(".footer__phones-ico").toggleClass("add-action-icons");
   });
   
+ 
+   	/**
+     * filter menu 
+     */ 
 
+  $(".filts__btn-menu").on("click", function(){
+    $(".left-filter-menu").toggleClass("activated-filts-menu");
+  });
+function screen_check(){
+  if ($(window).width() >= 991) { 
+    $(".left-filter-menu").removeClass("activated-filts-menu");
+    $(".nav-mobile").removeClass("active");
+    $(".footnav-mobile").removeClass("active");
+    $(".header-top.header-top__menu").removeClass("activated-top");
+    $(".footer__menu").removeClass("activated-bottom");
+  
+  }
+}
+screen_check();
+$(window).resize (function(){
+  screen_check();
+});
 
   	/**
      * slick slider1
@@ -76,6 +99,104 @@ $(document).ready(function() {
         arrows: true,
         dots:true});
   
+        $('.actions__slider').slick({
+          infinite:true,
+          
+          slidesToShow:3,
+          slidesToScroll:3,
+          arrows: true,
+          dots:true,
+          responsive: [
+              {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              // {
+              //   breakpoint: 600,
+              //   settings: {
+              //     slidesToShow: 2,
+              //     slidesToScroll: 2
+              //   }
+              // },
+              {
+                breakpoint: 767,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+              },
+
+              {
+                breakpoint: 499,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  arrows:true,
+                  infinite: true,
+                  dots: false
+                }
+              }
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+            ]
+      });
+
+
+
+      $('.best-goods-slider').slick({
+        infinite:true,
+        
+        slidesToShow:3,
+        slidesToScroll:3,
+        arrows: true,
+        dots:true,
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows:true,
+                infinite: true,
+                dots: true
+              }
+            },
+            // {
+            //   breakpoint: 600,
+            //   settings: {
+            //     slidesToShow: 2,
+            //     slidesToScroll: 2
+            //   }
+            // },
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 2,
+                arrows:true,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 499,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows:true,
+                infinite: true,
+                dots: false
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+    });
 
 
       // $("#filter-price").slider({
@@ -146,7 +267,9 @@ $(document).ready(function() {
         }
     });
 
-
+    $('[data-fancybox]').fancybox({
+      buttons : ['close']
+    });
 
 
   });

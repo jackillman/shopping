@@ -15,7 +15,7 @@
 	<link rel="shortcut icon" href="img/ahma.ico" type="image/x-icon">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css"> -->
     <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
     
@@ -114,7 +114,7 @@
 										</a>
 									</li>
 									<li class="basket">
-										<a href="#">
+										<a data-fancybox data-src="#basket-popup" href="javascript:;">
 											<img src="img/basket.png" alt="">	
 										</a>
 										<span class="count">3</span>
@@ -1124,11 +1124,76 @@
 </div>
  -->
 
+ <div style="display:none;" id="basket-popup" class="basket-popup">
+	<div class="basket-popup__close"></div>
+   <h2 class="basket-popup__title">Корзина</h2>
+   <div class="basket-popup__box">
+	   <div class="popup-item">
+		   <div class="item-img">
+			   <img src="img/ourgood.png" alt="good">
+		   </div>
+		   <div class="item-cont">
+			   <h4>Пустышка для кормления и жевания для детей</h4>
+			   <p>Вес <span>30</span> <span>гр.</span> </p>
+		   </div>
+		   <div class="item-howmany">
+			   <span>1</span>x
+			   <span>127.99</span>грн.	
+		   </div>
+		   <div class="item-close"></div>
+	   </div>
+	   
+   
+
+   
+		   <div class="popup-item">
+			   <div class="item-img">
+				   <img src="img/ourgood.png" alt="good">
+			   </div>
+			   <div class="item-cont">
+				   <h4>Пустышка для кормления и жевания для детей</h4>
+				   <p>Вес <span>30</span> <span>гр.</span> </p>
+			   </div>
+			   <div class="item-howmany">
+				   <span>1</span>x
+				   <span>127.99</span>грн.	
+			   </div>
+			   <div class="item-close"></div>
+		   </div>
+		   
+	   
+
+   
+			   <div class="popup-item">
+				   <div class="item-img">
+					   <img src="img/ourgood.png" alt="good">
+				   </div>
+				   <div class="item-cont">
+					   <h4>Пустышка для кормления и жевания для детей</h4>
+					   <p>Вес <span>30</span> <span>гр.</span> </p>
+				   </div>
+				   <div class="item-howmany">
+					   <span>1</span>x
+					   <span>127.99</span>грн.	
+				   </div>
+				   <div class="item-close"></div>
+			   </div>
+			   
+			</div> 
+
+	   <div class="basket-popup__pay">
+		   <p>Подытог:</p><span>2460</span>грн.
+	   </div>
+	   <div class="basket-popup__btn">
+		   <a href="#" class="exec">Перейти в корзину</a>
+		   <a href="#" class="exec">Оформление заказа</a>
+	   </div>
+	
+</div>
 
 
 
-
-
+<link rel="stylesheet" href="libs/fancybox-master/jquery.fancybox.min.css">
 	 <link rel="stylesheet" href="libs/animate/animate.css">
 	 <link rel="stylesheet" href="libs/raty/jquery.raty.css">
     
@@ -1151,8 +1216,8 @@
  <!--    <script type="text/javascript" src="libs/fancy/jquery.mousewheel-3.0.4.pack.js"></script> -->
 	<!-- <script type="text/javascript" src="libs/fancy/jquery.fancybox-1.3.4.js"></script> -->
 <!-- 	<link rel="stylesheet" type="text/css" href="libs/fancy/jquery.fancybox-1.3.4.css" media="screen" /> -->
-<script type="text/javascript" src="libs/fancybox/source/jquery.fancybox.js"></script>
-	<link rel="stylesheet" type="text/css" href="libs/fancybox/source/jquery.fancybox.css" media="screen" />
+
+<script src="libs/fancybox-master/jquery.fancybox.min.js"></script>
     <script src="libs/slick/slick.js"></script>
 	<!-- <script src="js/flexibility.js"></script> -->
 	<script src="js/common.js"></script>

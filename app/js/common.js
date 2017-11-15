@@ -1,6 +1,8 @@
 
 $(document).ready(function() {
-
+   //filtering
+   var mixer = mixitup(".goodsbox");
+   
 //параллакс топслайдера
  $(window).scroll(function(){
   var scr = $(this).scrollTop();
@@ -43,6 +45,7 @@ $(document).ready(function() {
     $(".searching").toggleClass("activated-search-panel");
     $(".header-top.header-top__menu").removeClass("activated-top");
     $(".header-top__phones-popup").removeClass("activated-phones");
+    $(".nav-mobile").removeClass("active");
     $(".search img").toggleClass("add-action-icons");
     $(".phone-ico").removeClass("add-action-icons");
 	});
@@ -56,12 +59,27 @@ $(document).ready(function() {
   });
 
   $(".footer__phones-ico").on("click", function(){
+   
     $(".footer__phones-popup").toggleClass("activated-phones-bottom");
     $(".footer__menu").removeClass("activated-bottom");
+    $(".footnav-mobile").removeClass("active");
     $(".footer__phones-ico").toggleClass("add-action-icons");
   });
   
-
+  function screen_check(){
+    if ($(window).width() >= 991) { 
+      // $(".left-filter-menu").removeClass("activated-filts-menu");
+      $(".nav-mobile").removeClass("active");
+      $(".footnav-mobile").removeClass("active");
+      $(".header-top.header-top__menu").removeClass("activated-top");
+      $(".footer__menu").removeClass("activated-bottom");
+    
+    }
+  }
+  screen_check();
+  $(window).resize (function(){
+    screen_check();
+  });
 
   	/**
      * slick slider1
@@ -322,8 +340,10 @@ $(document).ready(function() {
         }
     });
 
-   //filtering
-   var mixer = mixitup(".goodsbox");
+
+
+
+
 
 
   });

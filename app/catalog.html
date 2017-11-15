@@ -114,12 +114,14 @@
 										</a>
 									</li>
 									<li class="basket">
-										<a href="#">
+										<a data-fancybox data-src="#basket-popup" href="javascript:;">
 											<img src="img/basket.png" alt="">	
 										</a>
 										<span class="count">3</span>
 									</li>
 								</ul>
+
+
 								<div class="searching">
 									<input type="text" placeholder="Поиск">
 								</div>
@@ -214,7 +216,7 @@
 			<div class="catalog-block">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-xs-11 col-sm-5 col-md-3 left-filter-menu">
 							<div class="catalog-block__filtering">
 								<div class="pricingpicker">
 									<label for="pricingpicker__slide">Фильтр по цене</label>
@@ -238,6 +240,7 @@
 										<h3>Игрушки
 											<span class="count">2</span>
 										</h3>
+										
 										<ul>
 											<li><a href="#">Рюкзаки</a></li>
 											<li><a href="#">Переноски</a></li>
@@ -286,31 +289,31 @@
 									<h3 class="title-age">Возраст</h3>
 										<ul>
 											<li>
-											  <input type="radio" id="one-age-option" name="selector">
+											  <input type="radio" id="one-age-option" class="age-option" name="selector">
 											  <label for="one-age-option">С рождения</label>
 											  <span class="count-age">45</span>
 											</li>
 												
 											<li>
-											  <input type="radio" id="two-age-option" name="selector">
+											  <input type="radio" id="two-age-option" class="age-option" name="age-option">
 											  <label for="two-age-option">Без ограничений</label>
 											  <span class="count-age">45</span>
 											</li>
 												
 											<li>
-											  <input type="radio" id="three-age-option" name="selector">
+											  <input type="radio" id="three-age-option" class="age-option"  name="age-option">
 											  <label for="three-age-option">От 0 до 3 месяцев</label>
 											  <span class="count-age">15</span>	  
 											</li>
 
 											<li>
-												<input type="radio" id="four-age-option" name="selector">
+												<input type="radio" id="four-age-option" class="age-option" name="age-option">
 												<label for="four-age-option">От 0 до 6 месяцев</label>
 												<span class="count-age">25</span>	  
 										 	</li>
 
 										 	<li>
-												<input type="radio" id="five-age-option" name="selector">
+												<input type="radio" id="five-age-option" class="age-option" name="age-option">
 												<label for="five-age-option">От 0 до 12 месяцев</label>	
 												<span class="count-age">425</span>  
 											</li>
@@ -320,31 +323,31 @@
 										<h3 class="title-sex">Пол</h3>
 											<ul>
 												<li>
-												  <input type="radio" id="one-sex-option" name="selector">
+												  <input type="radio" id="one-sex-option" class="sex-option" name="sex-option">
 												  <label for="one-sex-option">Девочкам</label>
 												  <span class="count-sex">45</span>
 												</li>
 													
 												<li>
-												  <input type="radio" id="two-sex-option" name="selector">
+												  <input type="radio" id="two-sex-option" class="sex-option" name="sex-option">
 												  <label for="two-sex-option">Мальчикам</label>
 												  <span class="count-sex">45</span>
 												</li>
 													
 												<li>
-												  <input type="radio" id="three-sex-option" name="selector">
+												  <input type="radio" id="three-sex-option" class="sex-option" name="sex-option">
 												  <label for="three-sex-option">Детям</label>
 												  <span class="count-sex">15</span>	  
 												</li>
 	
 												<li>
-													<input type="radio" id="four-sex-option" name="selector">
+													<input type="radio" id="four-sex-option" class="sex-option" name="sex-option">
 													<label for="four-sex-option">Женщинам</label>
 													<span class="count-sex">25</span>	  
 												 </li>
 	
 												 <li>
-													<input type="radio" id="five-sex-option" name="selector">
+													<input type="radio" id="five-sex-option" class="sex-option" name="sex-option">
 													<label for="five-sex-option">Мужчинам</label>	
 													<span class="count-sex">425</span>  
 												</li>
@@ -355,31 +358,31 @@
 											<h3 class="title-brand">Бренд</h3>
 												<ul>
 													<li>
-													  <input type="radio" id="one-brand-option" name="selector">
+													  <input type="radio" id="one-brand-option" class="brand-option" name="brand-option">
 													  <label for="one-brand-option">Bamby</label>
 													  <span class="count-brand">45</span>
 													</li>
 														
 													<li>
-													  <input type="radio" id="two-brand-option" name="selector">
+													  <input type="radio" id="two-brand-option" class="brand-option" name="brand-option">
 													  <label for="two-brand-option">Babyby</label>
 													  <span class="count-brand">45</span>
 													</li>
 														
 													<li>
-													  <input type="radio" id="three-brand-option" name="selector">
+													  <input type="radio" id="three-brand-option" class="brand-option" name="brand-option">
 													  <label for="three-brand-option">Bebemania</label>
 													  <span class="count-brand">15</span>	  
 													</li>
 		
 													<li>
-														<input type="radio" id="four-brand-option" name="selector">
+														<input type="radio" id="four-brand-option" class="brand-option" name="brand-option">
 														<label for="four-brand-option">Bellababy</label>
 														<span class="count-brand">25</span>	  
 													 </li>
 		
 													 <li>
-														<input type="radio" id="five-brand-option" name="selector">
+														<input type="radio" id="five-brand-option" class="brand-option" name="brand-option">
 														<label for="five-brand-option">Berni</label>	
 														<span class="count-brand">425</span>  
 													</li>
@@ -387,22 +390,22 @@
 										</div>
 
 										<div class="formatpicker">
-												<h3 class="title-format">Бренд</h3>
+												<h3 class="title-format">Формат</h3>
 													<ul>
 														<li>
-														  <input type="radio" id="one-format-option" name="selector">
+														  <input type="radio" id="one-format-option" class="format-option" name="format-option">
 														  <label for="one-format-option">Все обьявления</label>
 														  <span class="count-format">45</span>
 														</li>
 															
 														<li>
-														  <input type="radio" id="two-format-option" name="selector">
+														  <input type="radio" id="two-format-option" class="format-option" name="format-option">
 														  <label for="two-format-option">Аукционные</label>
 														  <span class="count-format">45</span>
 														</li>
 															
 														<li>
-														  <input type="radio" id="three-format-option" name="selector">
+														  <input type="radio" id="three-format-option" class="format-option" name="format-option">
 														  <label for="three-format-option">Купить сейчас</label>
 														  <span class="count-format">15</span>	  
 														</li>
@@ -411,17 +414,763 @@
 													</ul>
 											</div>
 							</div>
+							<div class="catalog-block__best-goods hidden-sm hidden-xs">
+								<h2 class="best-goods__title">Лучшие товары</h2>
+								<div class="best-goods__card-bests card-bests">
+									<h2 class="card-bests__title">Пустышка для кормления, жевания</h2>
+									<div class="card-bests__img">
+										<img src="img/sock.png" alt="good">
+									</div>
+									<div class="card-bests__descs">
+											<div class="rating" data-score="1"></div>
+											<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+											<p class="cash">120.66 <span class="currency">грн.</span> </p>
+											<ul class="descs__options">
+												<li class="tolike"><a href="#" ></a></li>
+												<li class="tocompare"><a href=""></a></li>
+												<li class="tovisib"><a href=""></a></li>
+											</ul>
+											<div class="card-best-buy buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>	
+									</div>
+								</div>
+
+								<div class="best-goods__card-bests card-bests">
+										<h2 class="card-bests__title">Пустышка для кормления, жевания</h2>
+										<div class="card-bests__img">
+											<img src="img/sock.png" alt="good">
+										</div>
+										<div class="card-bests__descs">
+												<div class="rating" data-score="1"></div>
+												<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+												<p class="cash">120.66 <span class="currency">грн.</span> </p>
+												<ul class="descs__options">
+													<li class="tolike"><a href="#" ></a></li>
+													<li class="tocompare"><a href=""></a></li>
+													<li class="tovisib"><a href=""></a></li>
+												</ul>
+												<div class="card-best-buy buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>	
+										</div>
+									</div>
+
+									<div class="best-goods__card-bests card-bests">
+											<h2 class="card-bests__title">Пустышка для кормления, жеванияПустышка для кормления</h2>
+											<div class="card-bests__img">
+												<img src="img/sock.png" alt="good">
+											</div>
+											<div class="card-bests__descs">
+													<div class="rating" data-score="1"></div>
+													<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+													<p class="cash">120.66 <span class="currency">грн.</span> </p>
+													<ul class="descs__options">
+														<li class="tolike"><a href="#" ></a></li>
+														<li class="tocompare"><a href=""></a></li>
+														<li class="tovisib"><a href=""></a></li>
+													</ul>
+													<div class="card-best-buy buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>	
+											</div>
+										</div>
+
+							</div>
+							<div class="catalog-block__stocks hidden-sm hidden-xs">
+									<h2 class="stocks__title">Акции</h2>
+									<ul class="stocks">
+											<li class="stocks__item">
+													<div class="itm-img">
+														<img src="img/act.png" alt="">
+													</div>
+													<div class="itm-text">
+														<h5>Купи бутылочку <span class="happy">Happy baby</span> </h5>
+														<p>и получи скидку <span class="good">15%</span></p>
+												</div>					
+											</li>
+											<li class="stocks__item">
+													<div class="itm-img">
+														<img src="img/act.png" alt="">
+													</div>
+													<div class="itm-text">
+														<h5>Купи бутылочку <span class="happy">Happy baby</span> </h5>
+														<p>и получи скидку <span class="good">15%</span></p>
+												</div>					
+											</li>
+
+									</ul>
+							</div>
 						</div>
-						<div class="col-md-9">
+						
+
+
+
+						<div class="col-xs-12 col-sm-12 col-md-9">
+
 							<div class="catalog-block__goods">
+								<div class="filts">
+									<div class="filts__btn-menu hidden-md hidden-lg">
+										<h4>Меню</h4>
+									</div>
+									<div class="filts__results">
+
+										<p>Показаны результаты: <span>1-9</span> из <span>22</span> </p>
+									</div>
+									<select class="filts__selects">
+										<option selected disabled value="def">Выбор по умолчанию</option>
+										<option value="">Сортировка по убыванию</option>
+										<option value="">Сортировка по возрастанию</option>
+									</select>
+									<div class="filts__views">
+											<i class="fa fa-th-large" aria-hidden="true"></i>
+											<i class="fa fa-list" aria-hidden="true"></i>
+									</div>
+								</div>
+
+									
+								<div class="goodsbox">
+												
+									<div class="col-sm-4 col-md-4 goodsbox__item">
+										<div class="goodsbox__card card">
+															<ul class="card-options">
+																<li class="tolike"><a href="#" ></a></li>
+																<li class="tocompare"><a href=""></a></li>
+																<li class="tovisib"><a href=""></a></li>
+															</ul>
+						
+															<div class="card-sales">
+																	<span class="percents">-15%</span>
+															</div>
+						
+															<div class="card-img">
+																<img src="img/sock.png" alt="good">
+															</div>
+															<div class="card-content">
+																<a href="#" class="card-title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+																<div class="rating" data-score="1"></div>
+																<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+																<div class="card-price">
+																	
+																	<p class="cash">120 <span class="currency">грн.</span> </p>
+																</div>
+																<div class="card-buys">
+																	<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+																	<div class="oneclick">Купить в один клик</div>
+																</div>
+															</div>
+										</div>
+									</div>
+
+									<div class="col-sm-4 col-md-4 goodsbox__item">
+															<div class="goodsbox__card card">
+																<ul class="card-options">
+																	<li class="tolike"><a href="#" ></a></li>
+																	<li class="tocompare"><a href=""></a></li>
+																	<li class="tovisib"><a href=""></a></li>
+																</ul>
+							
+																<div class="card-sales">
+																		<span class="percents">-15%</span>
+																</div>
+							
+																<div class="card-img">
+																	<img src="img/sock.png" alt="good">
+																</div>
+																<div class="card-content">
+																	<a href="#" class="card-title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+																	<div class="rating" data-score="1"></div>
+																	<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+																	<div class="card-price">
+																		
+																		<p class="cash">120 <span class="currency">грн.</span> </p>
+																	</div>
+																	<div class="card-buys">
+																		<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+																		<div class="oneclick">Купить в один клик</div>
+																	</div>
+																</div>
+															</div>
+									</div>
+
+									<div class="col-sm-4 col-md-4 goodsbox__item">
+																<div class="goodsbox__card card">
+																	<ul class="card-options">
+																		<li class="tolike"><a href="#" ></a></li>
+																		<li class="tocompare"><a href=""></a></li>
+																		<li class="tovisib"><a href=""></a></li>
+																	</ul>
 								
+																	<div class="card-sales">
+																			<span class="percents">-15%</span>
+																	</div>
+								
+																	<div class="card-img">
+																		<img src="img/sock.png" alt="good">
+																	</div>
+																	<div class="card-content">
+																		<a href="#" class="card-title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+																		<div class="rating" data-score="1"></div>
+																		<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+																		<div class="card-price">
+																			
+																			<p class="cash">120 <span class="currency">грн.</span> </p>
+																		</div>
+																		<div class="card-buys">
+																			<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+																			<div class="oneclick">Купить в один клик</div>
+																		</div>
+																	</div>
+																</div>
+									</div>
+
+									<div class="col-sm-4 col-md-4 goodsbox__item">
+																	<div class="goodsbox__card card">
+																		<ul class="card-options">
+																			<li class="tolike"><a href="#" ></a></li>
+																			<li class="tocompare"><a href=""></a></li>
+																			<li class="tovisib"><a href=""></a></li>
+																		</ul>
+									
+																		<div class="card-sales">
+																				<span class="percents">-15%</span>
+																		</div>
+									
+																		<div class="card-img">
+																			<img src="img/sock.png" alt="good">
+																		</div>
+																		<div class="card-content">
+																			<a href="#" class="card-title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+																			<div class="rating" data-score="1"></div>
+																			<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+																			<div class="card-price">
+																				
+																				<p class="cash">120 <span class="currency">грн.</span> </p>
+																			</div>
+																			<div class="card-buys">
+																				<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+																				<div class="oneclick">Купить в один клик</div>
+																			</div>
+																		</div>
+																	</div>
+									</div>
+
+									<div class="col-sm-4 col-md-4 goodsbox__item">
+																		<div class="goodsbox__card card">
+																			<ul class="card-options">
+																				<li class="tolike"><a href="#" ></a></li>
+																				<li class="tocompare"><a href=""></a></li>
+																				<li class="tovisib"><a href=""></a></li>
+																			</ul>
+										
+																			<div class="card-sales">
+																					<span class="percents">-15%</span>
+																			</div>
+										
+																			<div class="card-img">
+																				<img src="img/sock.png" alt="good">
+																			</div>
+																			<div class="card-content">
+																				<a href="#" class="card-title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+																				<div class="rating" data-score="1"></div>
+																				<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+																				<div class="card-price">
+																					
+																					<p class="cash">120 <span class="currency">грн.</span> </p>
+																				</div>
+																				<div class="card-buys">
+																					<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+																					<div class="oneclick">Купить в один клик</div>
+																				</div>
+																			</div>
+																		</div>
+									</div>
+									<div class="col-sm-4 col-md-4 goodsbox__item">
+										<div class="goodsbox__card card">
+											<ul class="card-options">
+												<li class="tolike"><a href="#" ></a></li>
+												<li class="tocompare"><a href=""></a></li>
+												<li class="tovisib"><a href=""></a></li>
+											</ul>
+		
+											<div class="card-sales">
+													<span class="percents">-15%</span>
+															</div>
+							
+											<div class="card-img">
+												<img src="img/sock.png" alt="good">
+											</div>
+											<div class="card-content">
+												<a href="#" class="card-title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+												<div class="rating" data-score="1"></div>
+												<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+												<div class="card-price">
+													
+													<p class="cash">120 <span class="currency">грн.</span> </p>
+												</div>
+												<div class="card-buys">
+													<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+													<div class="oneclick">Купить в один клик</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-4 col-md-4 goodsbox__item">
+															<div class="goodsbox__card card">
+																<ul class="card-options">
+																	<li class="tolike"><a href="#" ></a></li>
+																	<li class="tocompare"><a href=""></a></li>
+																	<li class="tovisib"><a href=""></a></li>
+																</ul>
+							
+																<div class="card-sales">
+																		<span class="percents">-15%</span>
+																</div>
+							
+																<div class="card-img">
+																	<img src="img/sock.png" alt="good">
+																</div>
+																<div class="card-content">
+																	<a href="#" class="card-title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+																	<div class="rating" data-score="1"></div>
+																	<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+																	<div class="card-price">
+																		
+																		<p class="cash">120 <span class="currency">грн.</span> </p>
+																	</div>
+																	<div class="card-buys">
+																		<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+																		<div class="oneclick">Купить в один клик</div>
+																	</div>
+																</div>
+															</div>
+									</div>
+
+									<div class="col-sm-4 col-md-4 goodsbox__item">
+																<div class="goodsbox__card card">
+																	<ul class="card-options">
+																		<li class="tolike"><a href="#" ></a></li>
+																		<li class="tocompare"><a href=""></a></li>
+																		<li class="tovisib"><a href=""></a></li>
+																	</ul>
+								
+																	<div class="card-sales">
+																			<span class="percents">-15%</span>
+																	</div>
+								
+																	<div class="card-img">
+																		<img src="img/sock.png" alt="good">
+																	</div>
+																	<div class="card-content">
+																		<a href="#" class="card-title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+																		<div class="rating" data-score="1"></div>
+																		<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+																		<div class="card-price">
+																			
+																			<p class="cash">120 <span class="currency">грн.</span> </p>
+																		</div>
+																		<div class="card-buys">
+																			<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+																			<div class="oneclick">Купить в один клик</div>
+																		</div>
+																	</div>
+																</div>
+									</div>
+
+									<div class="col-sm-4 col-md-4 goodsbox__item">
+																	<div class="goodsbox__card card">
+																		<ul class="card-options">
+																			<li class="tolike"><a href="#" ></a></li>
+																			<li class="tocompare"><a href=""></a></li>
+																			<li class="tovisib"><a href=""></a></li>
+																		</ul>
+									
+																		<div class="card-sales">
+																				<span class="percents">-15%</span>
+																		</div>
+									
+																		<div class="card-img">
+																			<img src="img/sock.png" alt="good">
+																		</div>
+																		<div class="card-content">
+																			<a href="#" class="card-title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+																			<div class="rating" data-score="1"></div>
+																			<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+																			<div class="card-price">
+																				
+																				<p class="cash">120 <span class="currency">грн.</span> </p>
+																			</div>
+																			<div class="card-buys">
+																				<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+																				<div class="oneclick">Купить в один клик</div>
+																			</div>
+																		</div>
+																	</div>
+									</div>
+
+								</div>
+								
+								<div class="allgoods">
+									<div class="allgoods__cards cards">
+										<div class="col-xs-4">
+											<div class="cards__img">
+												    <a href="img/ergo.png" data-fancybox="images-preview">
+														<img src="img/ergo.png" />
+													</a>
+													<div style="display: none;">	
+														<a href="img/dec.png" data-fancybox="images-preview">
+															<img src="img/dec.png" />
+														</a>
+														<a href="img/bags.png" data-fancybox="images-preview">
+															<img src="img/bags.png" />
+														 </a>
+													</div>
+	
+											</div>		
+													
+										</div>
+										<div class="col-xs-8">
+											<div class="cards__content itm">
+												<h3 class="itm__title">Ergo baby FOUR-POSITION carrier-Cool Air-carbon Grey серый с сеткой</h3>
+												<div class="itm__mid">
+													<p class="cash">120 <span class="currency">грн.</span> </p>
+													<div class="rat">
+														<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+														<div class="rating" data-score="1"></div>
+														
+													</div>
+												</div>
+												<div class="itm__selecting">
+													<select name="" id="" class="colors">
+														<option value="" selected disabled>Выберите цвет</option>
+														<option value="red">Красный</option>
+														<option value="yellow">Желтый</option>
+														<option value="blue">Синий</option>
+													</select>
+
+													<select name="" id="" class="ops">
+															<option value="" selected disabled>Выберите опцию</option>
+															<option value="large">большой</option>
+															<option value="middle">средний</option>
+															<option value="little">малый</option>
+													</select>
+												</div>
+												<div class="itm__text">
+													<p>
+															290 Долгожданный вариант для родителей, чьи детки категорически не хотят сидеть 
+															«лицом» к маме, а хотят свободно смотреть по сторонам. Рюкзак-трансформер из 
+															органического хлопка, где 
+													</p>
+												</div>
+												<div class="itm__moreinfo">
+													<a href="#">Подробнее</a>
+												</div>
+											</div>		
+													
+										</div>
+									</div>
+
+									<div class="allgoods__cards cards">
+											<div class="col-xs-4">
+												<div class="cards__img">
+														<a href="img/ergo.png" data-fancybox="images-preview">
+															<img src="img/ergo.png" />
+														</a>
+														<div style="display: none;">	
+															<a href="img/dec.png" data-fancybox="images-preview">
+																<img src="img/dec.png" />
+															</a>
+															<a href="img/bags.png" data-fancybox="images-preview">
+																<img src="img/bags.png" />
+															 </a>
+														</div>
+		
+												</div>		
+														
+											</div>
+											<div class="col-xs-8">
+												<div class="cards__content itm">
+													<h3 class="itm__title">Ergo baby FOUR-POSITION carrier-Cool Air-carbon Grey серый с сеткой</h3>
+													<div class="itm__mid">
+														<p class="cash">120 <span class="currency">грн.</span> </p>
+														<div class="rat">
+															<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+															<div class="rating" data-score="1"></div>
+															
+														</div>
+													</div>
+													<div class="itm__selecting">
+														<select name="" id="" class="colors">
+															<option value="" selected disabled>Выберите цвет</option>
+															<option value="red">Красный</option>
+															<option value="yellow">Желтый</option>
+															<option value="blue">Синий</option>
+														</select>
+	
+														<select name="" id="" class="ops">
+																<option value="" selected disabled>Выберите опцию</option>
+																<option value="large">большой</option>
+																<option value="middle">средний</option>
+																<option value="little">малый</option>
+														</select>
+													</div>
+													<div class="itm__text">
+														<p>
+																290 Долгожданный вариант для родителей, чьи детки категорически не хотят сидеть 
+																«лицом» к маме, а хотят свободно смотреть по сторонам. Рюкзак-трансформер из 
+																органического хлопка, где 
+														</p>
+													</div>
+													<div class="itm__moreinfo">
+														<a href="#">Подробнее</a>
+													</div>
+												</div>		
+														
+											</div>
+										</div>
+
+										<div class="allgoods__cards cards">
+												<div class="col-xs-4">
+													<div class="cards__img">
+															<a href="img/ergo.png" data-fancybox="images-preview">
+																<img src="img/ergo.png" />
+															</a>
+															<div style="display: none;">	
+																<a href="img/dec.png" data-fancybox="images-preview">
+																	<img src="img/dec.png" />
+																</a>
+																<a href="img/bags.png" data-fancybox="images-preview">
+																	<img src="img/bags.png" />
+																 </a>
+															</div>
+			
+													</div>		
+															
+												</div>
+												<div class="col-xs-8">
+													<div class="cards__content itm">
+														<h3 class="itm__title">Ergo baby FOUR-POSITION carrier-Cool Air-carbon Grey серый с сеткой</h3>
+														<div class="itm__mid">
+															<p class="cash">120 <span class="currency">грн.</span> </p>
+															<div class="rat">
+																<span class="rating-hint"><span>(</span> 14 <span>)</span> </span>
+																<div class="rating" data-score="1"></div>
+																
+															</div>
+														</div>
+														<div class="itm__selecting">
+															<select name="" id="" class="colors">
+																<option value="" selected disabled>Выберите цвет</option>
+																<option value="red">Красный</option>
+																<option value="yellow">Желтый</option>
+																<option value="blue">Синий</option>
+															</select>
+		
+															<select name="" id="" class="ops">
+																	<option value="" selected disabled>Выберите опцию</option>
+																	<option value="large">большой</option>
+																	<option value="middle">средний</option>
+																	<option value="little">малый</option>
+															</select>
+														</div>
+														<div class="itm__text">
+															<p>
+																	290 Долгожданный вариант для родителей, чьи детки категорически не хотят сидеть 
+																	«лицом» к маме, а хотят свободно смотреть по сторонам. Рюкзак-трансформер из 
+																	органического хлопка, где 
+															</p>
+														</div>
+														<div class="itm__moreinfo">
+															<a href="#">Подробнее</a>
+														</div>
+													</div>		
+															
+												</div>
+											</div>
+
+
+								</div>
+								<ul class="pagination">
+										<li><a href="#">1</a></li>
+										<li class="active"><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li class="hidden-xs"><a href="#">5</a></li>
+										<li class="hidden-xs"><a href="#">6</a></li>
+										<li class="hidden-xs"><a href="#">7</a></li>
+										<li class="next"><a href="#">следующая</a></li>
+								</ul>
+
+								
+
 							</div>
 						</div>
 					</div>
-				</div>
+			</div>
+			<div class="catalog-block__best-goods-slider hidden-md hidden-lg">
+				<h2 class="main__title main__title-best">Лучшие товары</h2>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+								<div class="best-goods-slider">
+									<div class="best-goods-slider__item item-slide">
+										<ul class="item-slide__options">
+											<li class="tolike"><a href="#" ></a></li>
+											<li class="tocompare"><a href=""></a></li>
+											<li class="tovisib"><a href=""></a></li>
+										</ul>
+										<div class="item-slide__sales">
+												<span class="percents">-15%</span>
+										</div>
+						
+										<div class="item-slide__img">
+											<img src="img/sock.png" alt="good">
+										</div>
+										<div class="item-slide__content">
+											<a href="#" class="item-slide__title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+											
+											<div class="item-slide__price">
+													
+												<p class="cash">120 <span class="currency">грн.</span> </p>
+											</div>
+											<div class="item-slide__buys">
+												<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+												<div class="oneclick">Купить в один клик</div>
+											</div>
+										</div>
+									</div>
 
+									<div class="best-goods-slider__item item-slide">
+											<ul class="item-slide__options">
+												<li class="tolike"><a href="#" ></a></li>
+												<li class="tocompare"><a href=""></a></li>
+												<li class="tovisib"><a href=""></a></li>
+											</ul>
+											<div class="item-slide__sales">
+													<span class="percents">-15%</span>
+											</div>
+							
+											<div class="item-slide__img">
+												<img src="img/sock.png" alt="good">
+											</div>
+											<div class="item-slide__content">
+												<a href="#" class="item-slide__title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+												
+												<div class="item-slide__price">
+														
+													<p class="cash">120 <span class="currency">грн.</span> </p>
+												</div>
+												<div class="item-slide__buys">
+													<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+													<div class="oneclick">Купить в один клик</div>
+												</div>
+											</div>
+										</div>
+										<div class="best-goods-slider__item item-slide">
+												<ul class="item-slide__options">
+													<li class="tolike"><a href="#" ></a></li>
+													<li class="tocompare"><a href=""></a></li>
+													<li class="tovisib"><a href=""></a></li>
+												</ul>
+												<div class="item-slide__sales">
+														<span class="percents">-15%</span>
+												</div>
+								
+												<div class="item-slide__img">
+													<img src="img/sock.png" alt="good">
+												</div>
+												<div class="item-slide__content">
+													<a href="#" class="item-slide__title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+													
+													<div class="item-slide__price">
+															
+														<p class="cash">120 <span class="currency">грн.</span> </p>
+													</div>
+													<div class="item-slide__buys">
+														<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+														<div class="oneclick">Купить в один клик</div>
+													</div>
+												</div>
+											</div>
+
+								</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
+			<div class="catalog-block__actions actions hidden-md hidden-lg">
+				<h2 class="main__title main__title-acts">Акции</h2>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="actions__slider">
+								<li class="actions__items">
+									<div class="actions__items-aitem">
+										<div class="itm-img">
+											<img src="img/act.png" alt="">
+										</div>
+										<div class="itm-text">
+											<h5>Купи бутылочку <span class="happy">Happy baby</span> </h5>
+											<p>и получи скидку <span class="good">15%</span></p>
+										</div>
+									</div>					
+								</li>
+								<li class="actions__items">
+									<div class="actions__items-aitem">
+										<div class="itm-img">
+											<img src="img/act.png" alt="">
+										</div>
+										<div class="itm-text">
+											<h5>Купи бутылочку <span class="happy">Happy baby</span> </h5>
+											<p>и получи скидку <span class="good">15%</span></p>
+										</div>
+									</div>					
+								</li>
+								<li class="actions__items">
+									<div class="actions__items-aitem">
+										<div class="itm-img">
+											<img src="img/act.png" alt="">
+										</div>
+										<div class="itm-text">
+											<h5>Купи бутылочку <span class="happy">Happy baby</span> </h5>
+											<p>и получи скидку <span class="good">15%</span></p>
+										</div>
+									</div>					
+								</li>
+								<li class="actions__items">
+									<div class="actions__items-aitem">
+										<div class="itm-img">
+											<img src="img/act.png" alt="">
+										</div>
+										<div class="itm-text">
+											<h5>Купи бутылочку <span class="happy">Happy baby</span> </h5>
+											<p>и получи скидку <span class="good">15%</span></p>
+										</div>
+									</div>					
+								</li>
+								<li class="actions__items">
+									<div class="actions__items-aitem">
+										<div class="itm-img">
+											<img src="img/act.png" alt="">
+										</div>
+										<div class="itm-text">
+											<h5>Купи бутылочку <span class="happy">Happy baby</span> </h5>
+											<p>и получи скидку <span class="good">15%</span></p>
+										</div>
+									</div>					
+								</li>
+								<li class="actions__items">
+									<div class="actions__items-aitem">
+										<div class="itm-img">
+											<img src="img/act.png" alt="">
+										</div>
+										<div class="itm-text">
+											<h5>Купи бутылочку <span class="happy">Happy baby</span> </h5>
+											<p>и получи скидку <span class="good">15%</span></p>
+										</div>
+									</div>					
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>	
+			</div>
 
 
 
@@ -431,7 +1180,7 @@
 
 									
 		</div>
-
+	</div>
 													<!-- footer  -->
 		<footer class="footer">
 			<div class="container">
@@ -539,16 +1288,79 @@
 	</div>
 </div>
  -->
+ <div style="display:none;" id="basket-popup" class="basket-popup">
+	 	<div class="basket-popup__close"></div>
+		<h2 class="basket-popup__title">Корзина</h2>
+		<div class="basket-popup__box">
+			<div class="popup-item">
+				<div class="item-img">
+					<img src="img/ourgood.png" alt="good">
+				</div>
+				<div class="item-cont">
+					<h4>Пустышка для кормления и жевания для детей</h4>
+					<p>Вес <span>30</span> <span>гр.</span> </p>
+				</div>
+				<div class="item-howmany">
+					<span>1</span>x
+					<span>127.99</span>грн.	
+				</div>
+				<div class="item-close"></div>
+			</div>
+			
+		
 
+		
+				<div class="popup-item">
+					<div class="item-img">
+						<img src="img/ourgood.png" alt="good">
+					</div>
+					<div class="item-cont">
+						<h4>Пустышка для кормления и жевания для детей</h4>
+						<p>Вес <span>30</span> <span>гр.</span> </p>
+					</div>
+					<div class="item-howmany">
+						<span>1</span>x
+						<span>127.99</span>грн.	
+					</div>
+					<div class="item-close"></div>
+				</div>
+				
+			
 
+		
+					<div class="popup-item">
+						<div class="item-img">
+							<img src="img/ourgood.png" alt="good">
+						</div>
+						<div class="item-cont">
+							<h4>Пустышка для кормления и жевания для детей</h4>
+							<p>Вес <span>30</span> <span>гр.</span> </p>
+						</div>
+						<div class="item-howmany">
+							<span>1</span>x
+							<span>127.99</span>грн.	
+						</div>
+						<div class="item-close"></div>
+					</div>
+					
+				</div>		
 
+			<div class="basket-popup__pay">
+				<p>Подытог:</p><span>2460</span>грн.
+			</div>
+			<div class="basket-popup__btn">
+				<a href="#" class="exec">Перейти в корзину</a>
+				<a href="#" class="exec">Оформление заказа</a>
+			</div>
+	
+</div>
 
-
+ <link rel="stylesheet" href="libs/fancybox-master/jquery.fancybox.min.css">
 
 	 <link rel="stylesheet" href="libs/animate/animate.css">
 	 <link rel="stylesheet" href="libs/raty/jquery.raty.css">
 	 <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+	<link rel="stylesheet" type="text/css" href="css/catalog.min.css">
 	
     
     
@@ -564,11 +1376,14 @@
         new WOW().init();
     </script>
 
- <!--    <script type="text/javascript" src="libs/fancy/jquery.mousewheel-3.0.4.pack.js"></script> -->
-	<!-- <script type="text/javascript" src="libs/fancy/jquery.fancybox-1.3.4.js"></script> -->
-<!-- 	<link rel="stylesheet" type="text/css" href="libs/fancy/jquery.fancybox-1.3.4.css" media="screen" /> -->
-<script type="text/javascript" src="libs/fancybox/source/jquery.fancybox.js"></script>
-	<link rel="stylesheet" type="text/css" href="libs/fancybox/source/jquery.fancybox.css" media="screen" />
+    <!-- <script type="text/javascript" src="libs/fancy/jquery.mousewheel-3.0.4.pack.js"></script> 
+	<script type="text/javascript" src="libs/fancy/jquery.fancybox-1.3.4.js"></script> 
+	<link rel="stylesheet" type="text/css" href="libs/fancy/jquery.fancybox-1.3.4.css" media="screen" />
+<script type="text/javascript" src="libs/fancybox/source/jquery.fancybox.js"></script> -->
+
+<script src="libs/fancybox-master/jquery.fancybox.min.js"></script>
+
+
     <script src="libs/slick/slick.js"></script>
 	<!-- <script src="js/flexibility.js"></script> -->
 	<script src="js/common-catalog.js"></script>
