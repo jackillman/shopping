@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Shoppingbaby</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#2196F3">
+	<!-- <meta property="og:image" content="path/to/image.jpg"> -->
+	<link rel="shortcut icon" href="img/ahma.ico" type="image/x-icon">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css"> -->
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/bootstrap.min.css">
+   
+
+<!-- Optional theme -->
+
+    <!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<header class="header">
+			<nav class="header-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2 col-sm-2 col-md-6 head-height">
+							<!-- Hamburger top  -->
+							<div class="nav-mobile hidden-md hidden-lg">
+								<span class="nav-mobile__line nav-mobile__line--top"></span>
+								<span class="nav-mobile__line nav-mobile__line--middle active"></span>
+								<span class="nav-mobile__line nav-mobile__line--bottom"></span>							
+							</div>
+
+							<!-- menu  -->
+							<ul class="header-top header-top__menu">
+								<li><a href="#">О магазине</a></li>
+								<li><a href="#">Блог</a></li>
+								<li class="header-top__menu-active"><a href="#">Сотрудничество</a></li>
+								<li><a href="#">Акции и скидки</a></li>
+								<li><a href="#">Доставка и оплата</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+						<!-- phone icon  -->
+						<div class="col-xs-3 col-sm-7 col-md-4">
+							<div class="phone-ico hidden-sm hidden-md hidden-lg">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+							</div>
+							<!-- phone menu  -->
+							<div class="header-top header-top__phones">
+								<a href="tel:+111">+38 (095) 000-00-00</a>
+								<span>/</span>
+								<a href="tel:+222">+38 (095) 000-00-00</a>
+							</div>
+						</div>
+						<div class="col-xs-7 col-sm-3 col-md-2">
+							<div class="header-top header-top__order">
+								<a href="#" >Заказать звонок</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<!-- phone menu popup  -->
+			<div class="header-top header-top__phones-popup hidden-md hidden-lg hidden-sm">
+				<a href="tel:+111">+38 (095) 000-00-00</a>			
+				<a href="tel:+222">+38 (095) 000-00-00</a>
+			</div>
+				
+			<div class="header-main">
+				<nav class="header-mid">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-2 part">
+								<div class="header-mid header-mid__logo">
+									<img src="img/logo.png" alt="logotype" class="logotype-top">
+								</div>
+							</div>
+							<!-- header buttons actions  -->
+							<div class="col-xs-12 col-sm-6 col-md-2 col-md-push-8 part">
+								<ul class="header-mid header-mid__actions">
+									<li class="search">
+										<a href="#">
+											<img src="img/search.png" alt="">	
+										</a>
+									</li>
+									<li class="account">
+										<a href="#">
+											<img src="img/user.png" alt="">		
+										</a>
+									</li>
+									<li class="likes">
+										<a href="#">
+											<img src="img/like.png" alt="">		
+										</a>
+									</li>
+									<li class="basket">
+										<a data-fancybox data-src="#basket-popup" href="javascript:;">
+											<img src="img/basket.png" alt="">	
+										</a>
+										<span class="count">3</span>
+									</li>
+								</ul>
+
+
+								<div class="searching">
+									<input type="text" placeholder="Поиск">
+								</div>
+							</div>
+							<!-- Header menu -->
+							<div class="hidden-xs col-sm-12 col-md-8 col-md-pull-2 part" >
+									<ul class="header-mid__menu">
+										<li><a href="#">Эрго-рюкзаки</a></li>
+										<li><a href="#">Многоразовые подгузники</a></li>
+										<li class="header-mid__menu-active"><a href="">Игрушки</a></li>
+										<li><a href="#">Уход и кормление</a></li>
+										<li><a href="#">Для мам</a></li>
+									</ul>
+							</div>
+
+
+						</div>
+					</div>	
+				</nav>
+				
+				
+				<div class="header-main__slider">
+				<!-- Header slider  -->
+					<div class="slider-top">
+						<div class="oneslide">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-8">
+										<div class="content wow bounceInLeft">
+											<h1 class="slide-title">С нашими товарами</h1>
+											<h2 class="slide-title2">не выпадет ни один ребенок</h2> 
+											<h2 class="slide-desc">Родителям дает крылья</h2>
+											<a href="#" class="to-shop">В магазин</a>
+										</div>
+									</div>
+
+							
+									<div class="col-md-4">
+										<img class="wow bounceInUp" src="img/mom.png" alt="mom">
+									</div>
+						
+								</div>
+							</div>
+						</div>
+						<div class="twoslide">
+								<div class="container">
+										<div class="row">
+											<div class="col-md-8">
+												<div class="content">
+													<h1 class="slide-title">Добро пожаловать</h1>
+													<h2 class="slide-title2"></h2> 
+													<h2 class="slide-desc">в интернет машазин для мам и пап</h2>
+													<a href="#" class="to-shop">В магазин</a>
+												</div>
+											</div>
+
+									<div class="col-md-4">
+		
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="threeslide">
+								<div class="container">
+										<div class="row">
+											<div class="col-md-8">
+												<div class="content">
+													<h1 class="slide-title">Добро пожаловать</h1>
+													<h2 class="slide-title2"></h2> 
+													<h2 class="slide-desc">в интернет машазин для мам и пап</h2>
+													<a href="#" class="to-shop">В магазин</a>
+												</div>
+											</div>
+
+									<div class="col-md-4">
+		
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>			
+		</header>
+
+		<div class="main">
+						<!-- content  -->
+
+			<div class="product">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+								<div class="product__tab">
+										
+										  <!-- Nav tabs -->
+									<ul class="nav nav-tabs" role="tablist">
+										<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Описание</a></li>
+										<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Доп. информация</a></li>
+										<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Отзывы</a></li>
+										
+			  					    </ul>
+										
+										  <!-- Tab panes -->
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane active prod-desc" id="home">
+											<div class="row prod-row">
+												<div class="col-sm-5">
+													<div class="prod-desc__video">
+														<iframe width="420" height="320" src="https://www.youtube.com/embed/6SeOwBYCa3o" frameborder="0" allowfullscreen></iframe>
+													</div>
+													
+												</div>
+												<div class="col-sm-7 ">
+													<div class="prod-desc__text">
+														<h3>Использование эрго рюкзака Ergo Baby Carrier Four Position 360 в положении «ребенок сзади»</h3>
+														<p>1290 Долгожданный вариант для родителей, чьи детки категорически не хотят сидеть «лицом» к 
+															маме, а хотят свободно смотреть по сторонам. Рюкзак-трансформер из органического хлопка, 
+															где предусмотрено четыре комфортабельных и эргономичных способа ношения ребенка:
+														</p>
+														<p>
+															Рюкзак можно использовать с рождения (до 4 месяцев необходимо докупить специальную вставку
+															для малыша, она необходима для поддержки головы, 
+															пока малыш не совсем уверенно ее держит.) и до 20 кг.
+														</p>
+														<p>
+															С такой переноской вопроса «Что выбрать кенгуру, слинг или рюкзак?» больше не стоит, 
+															т.к. данный продукт собрал и соединил в 
+															себе воедино все плюсы и достоинства всех других переносок для малышей.
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="row prod-row">
+												<div class="col-sm-7 ">
+														<div class="prod-desc__text">
+															<h3>Использование эрго рюкзака Ergo Baby Carrier Four Position 360 в положении «ребенок сзади»</h3>
+															<p>1290 Долгожданный вариант для родителей, чьи детки категорически не хотят сидеть «лицом» к 
+																маме, а хотят свободно смотреть по сторонам. Рюкзак-трансформер из органического хлопка, 
+																где предусмотрено четыре комфортабельных и эргономичных способа ношения ребенка:
+															</p>
+															<p>
+																Рюкзак можно использовать с рождения (до 4 месяцев необходимо докупить специальную вставку
+																для малыша, она необходима для поддержки головы, 
+																пока малыш не совсем уверенно ее держит.) и до 20 кг.
+															</p>
+															<p>
+																С такой переноской вопроса «Что выбрать кенгуру, слинг или рюкзак?» больше не стоит, 
+																т.к. данный продукт собрал и соединил в 
+																себе воедино все плюсы и достоинства всех других переносок для малышей.
+															</p>
+														</div>
+												</div>
+												<div class="col-sm-5">
+														<div class="prod-desc__img">
+															<img src="img/prod1.jpg" alt="">
+															
+														</div>
+														
+												</div>
+											</div>	
+											<div class="row prod-row">
+												<div class="col-sm-5">
+														<div class="prod-desc__video">
+																<img src="img/prod1.jpg" alt="">
+														</div>
+														
+												</div>
+												<div class="col-sm-7 ">
+														<div class="prod-desc__text">
+															<h3>Использование эрго рюкзака Ergo Baby Carrier Four Position 360 в положении «ребенок сзади»</h3>
+															<p>1290 Долгожданный вариант для родителей, чьи детки категорически не хотят сидеть «лицом» к 
+																маме, а хотят свободно смотреть по сторонам. Рюкзак-трансформер из органического хлопка, 
+																где предусмотрено четыре комфортабельных и эргономичных способа ношения ребенка:
+															</p>
+															<p>
+																Рюкзак можно использовать с рождения (до 4 месяцев необходимо докупить специальную вставку
+																для малыша, она необходима для поддержки головы, 
+																пока малыш не совсем уверенно ее держит.) и до 20 кг.
+															</p>
+															<p>
+																С такой переноской вопроса «Что выбрать кенгуру, слинг или рюкзак?» больше не стоит, 
+																т.к. данный продукт собрал и соединил в 
+																себе воедино все плюсы и достоинства всех других переносок для малышей.
+															</p>
+														</div>
+												</div>
+											</div>
+										</div>
+										<div role="tabpanel" class="tab-pane" id="profile">
+											<div class="row">
+												<div class="col-xs-6">Материал:</div>
+												<div class="col-xs-6">Кожа</div>
+												<div class="col-xs-6">Способ применения:</div>
+												<div class="col-xs-6">Носить</div>
+											</div>
+										</div>
+										<div role="tabpanel" class="tab-pane" id="messages">
+											<div class="prod-desc__rev">
+													<div class="review__item">
+														<div class="review__item reviewer-person">
+															
+																<img src="img/01w.jpg" alt="woman">
+																<h5>Любимова Дарья</h5>
+						
+														</div>
+														<div class="review__item reviewer-content">
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores deleniti ullam rem dolor reiciendis hic sed natus veritatis nisi exercitationem.
+															Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores deleniti ullam rem dolor reiciendis hic sed natus veritatis nisi exercitationem.
+														</div>
+													</div>
+													<div class="review__item">
+															<div class="review__item reviewer-person">
+																
+																	<img src="img/01w.jpg" alt="woman">
+																	<h5>Любимова Дарья</h5>
+							
+															</div>
+															<div class="review__item reviewer-content">
+																Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores deleniti ullam rem dolor reiciendis hic sed natus veritatis nisi exercitationem.
+																Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores deleniti ullam rem dolor reiciendis hic sed natus veritatis nisi exercitationem.
+															</div>
+														</div>
+											</div>
+										</div>
+										
+									</div>
+										
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="catalog-block">
+				<div class="catalog-block__manual manual">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+							
+									
+								<div class="col-sm-9 col-sm-push-3 col-md-7 col-md-push-2 manual__content">
+									<h3>Руководство <span>по использованию Эрго-рюкзака</span></h3>
+								</div>
+									
+								<div class="col-sm-3 col-sm-pull-9 col-md-2 col-md-pull-7 manual__img">
+									<img src="img/manual.png" alt="">									</div>
+										
+								<div class="col-sm-9 col-md-3 manual__btn">
+									<a href="#">Подробнее об Ergobaby</a>
+								</div>
+						
+							</div>
+						</div>
+					</div>
+				</div>
+
+					<div class="catalog-block__complect complect">
+						<h2 class="main__title main__title-complect">Что входит в комплект</h2>
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="complect__img">
+										<img src="img/complect.png" alt="">
+									</div>
+									<div class="complect__content">
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+											Cum explicabo rerum nulla commodi ut possimus magni, voluptates
+											 quae qui non.
+										</p>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="catalog-block__maybelikes-slider">
+							<h2 class="main__title main__title-maybelikes">Вам также может понравиться</h2>
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-12">
+											<div class="maybelikes-slider">
+												<div class="maybelikes-slider__item item-slide">
+													<ul class="item-slide__options">
+														<li class="tolike"><a href="#" ></a></li>
+														<li class="tocompare"><a href=""></a></li>
+														<li class="tovisib"><a href=""></a></li>
+													</ul>
+													<div class="item-slide__sales">
+															<span class="percents">-15%</span>
+													</div>
+									
+													<div class="item-slide__img">
+														<img src="img/sock.png" alt="good">
+													</div>
+													<div class="item-slide__content">
+														<a href="#" class="item-slide__title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+														
+														<div class="item-slide__price">
+																
+															<p class="cash">120 <span class="currency">грн.</span> </p>
+														</div>
+														<div class="item-slide__buys">
+															<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+															<div class="oneclick">Купить в один клик</div>
+														</div>
+													</div>
+												</div>
+			
+												<div class="maybelikes-slider__item item-slide">
+														<ul class="item-slide__options">
+															<li class="tolike"><a href="#" ></a></li>
+															<li class="tocompare"><a href=""></a></li>
+															<li class="tovisib"><a href=""></a></li>
+														</ul>
+														<div class="item-slide__sales">
+																<span class="percents">-15%</span>
+														</div>
+										
+														<div class="item-slide__img">
+															<img src="img/sock.png" alt="good">
+														</div>
+														<div class="item-slide__content">
+															<a href="#" class="item-slide__title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+															
+															<div class="item-slide__price">
+																	
+																<p class="cash">120 <span class="currency">грн.</span> </p>
+															</div>
+															<div class="item-slide__buys">
+																<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+																<div class="oneclick">Купить в один клик</div>
+															</div>
+														</div>
+													</div>
+													<div class="maybelikes-slider__item item-slide">
+															<ul class="item-slide__options">
+																<li class="tolike"><a href="#" ></a></li>
+																<li class="tocompare"><a href=""></a></li>
+																<li class="tovisib"><a href=""></a></li>
+															</ul>
+															<div class="item-slide__sales">
+																	<span class="percents">-15%</span>
+															</div>
+											
+															<div class="item-slide__img">
+																<img src="img/sock.png" alt="good">
+															</div>
+															<div class="item-slide__content">
+																<a href="#" class="item-slide__title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+																
+																<div class="item-slide__price">
+																		
+																	<p class="cash">120 <span class="currency">грн.</span> </p>
+																</div>
+																<div class="item-slide__buys">
+																	<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+																	<div class="oneclick">Купить в один клик</div>
+																</div>
+															</div>
+													</div>
+													<div class="maybelikes-slider__item item-slide">
+															<ul class="item-slide__options">
+																<li class="tolike"><a href="#" ></a></li>
+																<li class="tocompare"><a href=""></a></li>
+																<li class="tovisib"><a href=""></a></li>
+															</ul>
+															<div class="item-slide__sales">
+																	<span class="percents">-15%</span>
+															</div>
+											
+															<div class="item-slide__img">
+																<img src="img/sock.png" alt="good">
+															</div>
+															<div class="item-slide__content">
+																<a href="#" class="item-slide__title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+																
+																<div class="item-slide__price">
+																		
+																	<p class="cash">120 <span class="currency">грн.</span> </p>
+																</div>
+																<div class="item-slide__buys">
+																	<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+																	<div class="oneclick">Купить в один клик</div>
+																</div>
+															</div>
+													</div>
+													<div class="maybelikes-slider__item item-slide">
+															<ul class="item-slide__options">
+																<li class="tolike"><a href="#" ></a></li>
+																<li class="tocompare"><a href=""></a></li>
+																<li class="tovisib"><a href=""></a></li>
+															</ul>
+															<div class="item-slide__sales">
+																	<span class="percents">-15%</span>
+															</div>
+											
+															<div class="item-slide__img">
+																<img src="img/sock.png" alt="good">
+															</div>
+															<div class="item-slide__content">
+																<a href="#" class="item-slide__title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+																
+																<div class="item-slide__price">
+																		
+																	<p class="cash">120 <span class="currency">грн.</span> </p>
+																</div>
+																<div class="item-slide__buys">
+																	<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+																	<div class="oneclick">Купить в один клик</div>
+																</div>
+															</div>
+													</div>
+			
+											</div>
+									</div>
+								</div>
+							</div>
+					</div>
+
+				
+			<div class="catalog-block__related-goods-slider">
+				<h2 class="main__title main__title-related">Сопутствующие товары</h2>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+								<div class="related-goods-slider">
+									<div class="related-goods-slider__item item-slide">
+										<ul class="item-slide__options">
+											<li class="tolike"><a href="#" ></a></li>
+											<li class="tocompare"><a href=""></a></li>
+											<li class="tovisib"><a href=""></a></li>
+										</ul>
+										<div class="item-slide__sales">
+												<span class="percents">-15%</span>
+										</div>
+						
+										<div class="item-slide__img">
+											<img src="img/sock.png" alt="good">
+										</div>
+										<div class="item-slide__content">
+											<a href="#" class="item-slide__title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+											
+											<div class="item-slide__price">
+													
+												<p class="cash">120 <span class="currency">грн.</span> </p>
+											</div>
+											<div class="item-slide__buys">
+												<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+												<div class="oneclick">Купить в один клик</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="related-goods-slider__item item-slide">
+											<ul class="item-slide__options">
+												<li class="tolike"><a href="#" ></a></li>
+												<li class="tocompare"><a href=""></a></li>
+												<li class="tovisib"><a href=""></a></li>
+											</ul>
+											<div class="item-slide__sales">
+													<span class="percents">-15%</span>
+											</div>
+							
+											<div class="item-slide__img">
+												<img src="img/sock.png" alt="good">
+											</div>
+											<div class="item-slide__content">
+												<a href="#" class="item-slide__title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+												
+												<div class="item-slide__price">
+														
+													<p class="cash">120 <span class="currency">грн.</span> </p>
+												</div>
+												<div class="item-slide__buys">
+													<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+													<div class="oneclick">Купить в один клик</div>
+												</div>
+											</div>
+										</div>
+										<div class="related-goods-slider__item item-slide">
+												<ul class="item-slide__options">
+													<li class="tolike"><a href="#" ></a></li>
+													<li class="tocompare"><a href=""></a></li>
+													<li class="tovisib"><a href=""></a></li>
+												</ul>
+												<div class="item-slide__sales">
+														<span class="percents">-15%</span>
+												</div>
+								
+												<div class="item-slide__img">
+													<img src="img/sock.png" alt="good">
+												</div>
+												<div class="item-slide__content">
+													<a href="#" class="item-slide__title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+													
+													<div class="item-slide__price">
+															
+														<p class="cash">120 <span class="currency">грн.</span> </p>
+													</div>
+													<div class="item-slide__buys">
+														<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+														<div class="oneclick">Купить в один клик</div>
+													</div>
+												</div>
+											</div>
+											<div class="related-goods-slider__item item-slide">
+												<ul class="item-slide__options">
+													<li class="tolike"><a href="#" ></a></li>
+													<li class="tocompare"><a href=""></a></li>
+													<li class="tovisib"><a href=""></a></li>
+												</ul>
+												<div class="item-slide__sales">
+														<span class="percents">-15%</span>
+												</div>
+								
+												<div class="item-slide__img">
+													<img src="img/sock.png" alt="good">
+												</div>
+												<div class="item-slide__content">
+													<a href="#" class="item-slide__title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+													
+													<div class="item-slide__price">
+															
+														<p class="cash">120 <span class="currency">грн.</span> </p>
+													</div>
+													<div class="item-slide__buys">
+														<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+														<div class="oneclick">Купить в один клик</div>
+													</div>
+												</div>
+											</div>
+											<div class="related-goods-slider__item item-slide">
+												<ul class="item-slide__options">
+													<li class="tolike"><a href="#" ></a></li>
+													<li class="tocompare"><a href=""></a></li>
+													<li class="tovisib"><a href=""></a></li>
+												</ul>
+												<div class="item-slide__sales">
+														<span class="percents">-15%</span>
+												</div>
+								
+												<div class="item-slide__img">
+													<img src="img/sock.png" alt="good">
+												</div>
+												<div class="item-slide__content">
+													<a href="#" class="item-slide__title">Пустышка для кормления, жевания Пустышка для кормления, жевания</a>
+													
+													<div class="item-slide__price">
+															
+														<p class="cash">120 <span class="currency">грн.</span> </p>
+													</div>
+													<div class="item-slide__buys">
+														<div class="buy"><i class="fa fa-shopping-basket" aria-hidden="true"></i><span>в корзину</span> </div>
+														<div class="oneclick">Купить в один клик</div>
+													</div>
+												</div>
+											</div>
+
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+						
+		</div>
+	</div>
+													<!-- footer  -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+						<!-- footer hamburger  -->
+					<div class="bottom-menu">
+							<div class="footnav-mobile hidden-md hidden-lg">
+								<span class="footnav-mobile__line footnav-mobile__line--top"></span>
+								<span class="footnav-mobile__line footnav-mobile__line--middle active"></span>
+								<span class="footnav-mobile__line footnav-mobile__line--bottom"></span>							
+							</div>
+							<!-- footer menu  -->
+							<ul class="footer__menu hidden-md hidden-lg">
+								<li><a href="#">О магазине</a></li>
+								<li><a href="#">Блог</a></li>
+								<li><a href="#">Сотрудничество</a></li>
+								<li><a href="#">Акции и скидки</a></li>
+								<li><a href="#">Доставка и оплата</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+							<!-- footer phone icon   -->
+							<div class="footer__phones-ico hidden-md hidden-lg hidden-sm"><i class="fa fa-phone" aria-hidden="true"></i></div>
+							<!-- footer phone popup  -->
+							<div class="footer__phones-popup hidden-md hidden-lg hidden-sm">
+								<a href="tel:+111">+38 (095) 000-00-00</a>
+								
+								<a href="tel:+222">+38 (095) 000-00-00</a>
+							</div>
+					</div>
+
+
+
+					<div class="col-sm-4 col-md-4">
+						<div class="footer__logo">
+							<a href=""><img src="img/logo-foot.png" alt=""></a>
+						</div>
+						<div class="footer__contacts hidden-xs">
+							<h4>Адрес нашего магазина:</h4>
+							<p>г. Киев, ул. Минина 12, <br>
+								от м. Черниговской 7 минут <br>
+								за ОщадБанком</p>
+						</div>
+					</div>
+
+
+
+					<div class="hidden-xs hidden-sm col-md-4">
+						<ul class="footer__list">
+							<li><a href="#">Сотрудничество</a></li>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Акции и скидки</a></li>
+							<li><a href="#">Условия магазина</a></li>
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">Оптовая покупка</a></li>
+							<li><a href="#">Блог</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-8 col-md-4">
+						<div class="footer__social">
+							<h4>Подпишитесь на рассылку</h4>
+							<div class="footer__subscribe">
+								<input type="text" placeholder="Введите e-mail">
+								<button> > </button>
+							</div>
+							<ul class="soc-btns">
+								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+							</ul>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+									<!-- footer bottom  -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+					<div class="fbottom">
+						<div class="fbottom__left">
+							<p>2017 Официальный магазин Shoppingbaby. Все права защищены</p>
+						</div>
+						<div class="fbottom__right">
+							<img src="img/master.png" alt="mastercard">
+							<img src="img/visa.png" alt="visa">
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+
+		</footer>
+
+
+		
+	</div>
+<!-- end wrapper  -->
+<div id="up"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+
+<!-- <div class="KW_progressContainer">
+	<div class="KW_progressBar">
+
+	</div>
+</div>
+ -->
+ <div style="display:none;" id="basket-popup" class="basket-popup">
+	 	<div class="basket-popup__close"></div>
+		<h2 class="basket-popup__title">Корзина</h2>
+		<div class="basket-popup__box">
+			<div class="popup-item">
+				<div class="item-img">
+					<img src="img/ourgood.png" alt="good">
+				</div>
+				<div class="item-cont">
+					<h4>Пустышка для кормления и жевания для детей</h4>
+					<p>Вес <span>30</span> <span>гр.</span> </p>
+				</div>
+				<div class="item-howmany">
+					<span>1</span>x
+					<span>127.99</span>грн.	
+				</div>
+				<div class="item-close"></div>
+			</div>
+			
+		
+
+		
+				<div class="popup-item">
+					<div class="item-img">
+						<img src="img/ourgood.png" alt="good">
+					</div>
+					<div class="item-cont">
+						<h4>Пустышка для кормления и жевания для детей</h4>
+						<p>Вес <span>30</span> <span>гр.</span> </p>
+					</div>
+					<div class="item-howmany">
+						<span>1</span>x
+						<span>127.99</span>грн.	
+					</div>
+					<div class="item-close"></div>
+				</div>
+				
+			
+
+		
+					<div class="popup-item">
+						<div class="item-img">
+							<img src="img/ourgood.png" alt="good">
+						</div>
+						<div class="item-cont">
+							<h4>Пустышка для кормления и жевания для детей</h4>
+							<p>Вес <span>30</span> <span>гр.</span> </p>
+						</div>
+						<div class="item-howmany">
+							<span>1</span>x
+							<span>127.99</span>грн.	
+						</div>
+						<div class="item-close"></div>
+					</div>
+					
+				</div>		
+
+			<div class="basket-popup__pay">
+				<p>Подытог:</p><span>2460</span>грн.
+			</div>
+			<div class="basket-popup__btn">
+				<a href="#" class="exec">Перейти в корзину</a>
+				<a href="#" class="exec">Оформление заказа</a>
+			</div>
+	
+</div>
+
+ <link rel="stylesheet" href="libs/fancybox-master/jquery.fancybox.min.css">
+
+	 <link rel="stylesheet" href="libs/animate/animate.css">
+	 <link rel="stylesheet" href="libs/raty/jquery.raty.css">
+	 <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/product-card.min.css">
+	
+    
+    
+    <script src="libs/jquery-3.2.1.min.js"></script>
+
+    <script src="libs/jquery-ui/jquery-ui.min.js"></script>
+    
+	<script src="libs/wow.min.js"></script>
+	<script src="libs/bootstrap/bootstrap.min.js"></script>
+	<script src="libs/raty/jquery.raty.js"></script>
+	<script src="libs/mixitup.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- <script type="text/javascript" src="libs/fancy/jquery.mousewheel-3.0.4.pack.js"></script> 
+	<script type="text/javascript" src="libs/fancy/jquery.fancybox-1.3.4.js"></script> 
+	<link rel="stylesheet" type="text/css" href="libs/fancy/jquery.fancybox-1.3.4.css" media="screen" />
+<script type="text/javascript" src="libs/fancybox/source/jquery.fancybox.js"></script> -->
+
+<script src="libs/fancybox-master/jquery.fancybox.min.js"></script>
+
+
+    <script src="libs/slick/slick.js"></script>
+	<!-- <script src="js/flexibility.js"></script> -->
+	<script src="js/common-product-card.js"></script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

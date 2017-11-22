@@ -33,7 +33,7 @@ $(document).ready(function() {
     $(".searching").removeClass("activated-search-panel");
     $(".header-top__phones-popup").toggleClass("activated-phones");
     $(".header-top.header-top__menu").removeClass("activated-top");
-  
+    $(".nav-mobile").removeClass("active");
     $(this).toggleClass("add-action-icons");
     $(".search img").removeClass("add-action-icons");
   });
@@ -132,7 +132,7 @@ $(window).resize (function(){
               },
 
               {
-                breakpoint: 499,
+                breakpoint: 600,
                 settings: {
                   slidesToShow: 1,
                   slidesToScroll: 1,
@@ -183,7 +183,7 @@ $(window).resize (function(){
               }
             },
             {
-              breakpoint: 499,
+              breakpoint: 600,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,

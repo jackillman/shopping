@@ -25,6 +25,9 @@
     @media (min-width: 250px) and (max-width: 499px)
         @content
 
+@mixin microCust
+    @media (min-width: 499px) and (max-width: 550px)
+        @content
 
 *
 	-webkit-box-sizing: border-box
@@ -1499,6 +1502,8 @@ body
 			height: 100%	
 			@include micro
 				display: none
+			@include microCust
+				display: none
 			.cards
 				height: 310px
 				border: 1px solid rgba(#616161,0.1)
@@ -1527,7 +1532,7 @@ body
 							@include large
 								height: 290px
 							@include small
-								width: 100%
+								width: auto
 								height: auto
 								margin-top: 60px
 						
@@ -1721,6 +1726,8 @@ body
 				@include small
 					margin: 0 10px
 					width: 100%
+				@include micro
+					margin: 0 15px
 				&:hover .item-slide__options
 					right: 10px
 				&:hover .item-slide__title
@@ -1930,6 +1937,8 @@ body
 				width: 100%
 				@include small
 					font-size: 50px
+				@include micro
+					display: none
 		&__slider
 			padding: 0
 			.slick-prev.slick-arrow
@@ -1989,11 +1998,11 @@ body
 					img
 						width: 100%
 						@include small
-							width: 100%
-							margin-top: 30px
+							width: auto
+							margin-top: 0px
 						@include micro
 							width: 100%
-							margin-top: 40px
+							margin-top: 0
 				.itm-text
 					width: 60%
 					margin: 0
@@ -2269,6 +2278,7 @@ body
 			@include micro
 				left: -500px
 				top: -250px
+				z-index: 1000
 				
 				
 			li
